@@ -1,4 +1,4 @@
-## 系统备份
+# 系统备份
 ----------
 
 1. 获取管理员权限
@@ -26,8 +26,7 @@ tar -cvpzf ubuntu_backup@`date +%Y-%m-%d`.tar.gz --exclude=ubuntu_backup@`date +
 
 
 
-
-## 系统还原
+# 系统还原
 ----------
 
 1. 进入ubuntu启动盘系统
