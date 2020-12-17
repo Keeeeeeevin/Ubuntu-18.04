@@ -38,7 +38,7 @@
 1. 关闭nouveau，具体为：
 
 * 在/etc/modprobe.d目录下创建blacklist-nouveau.conf文件，并修改权限：
-```javascript
+```html
 cd /etc/modprobe.d
 sudo touch blacklist-nouveau.conf
 sudo chmod a+x blacklist-nouveau.conf
