@@ -4,11 +4,11 @@
 ## 1. Win10系统安装
 ----------
 
-####1. Win10启动盘：用“大白菜”等软件制作WIN10系统启动U盘《Software01.Ubuntu 系统》。
+1. Win10启动盘：用“大白菜”等软件制作WIN10系统启动U盘《Software01.Ubuntu 系统》。
 
-####2. 安装Win10系统：采用MBR分区方式，安装Win10操作系统。
+2. 安装Win10系统：采用MBR分区方式，安装Win10操作系统。
 
-####3. 压缩卷：进入Win10系统，磁盘管理 --> 压缩卷（由“扩展分区”压缩）。
+3. 压缩卷：进入Win10系统，磁盘管理 --> 压缩卷（由“扩展分区”压缩）。
 
 ## 2. Ubuntu系统安装
 ----------
@@ -71,7 +71,7 @@ sudo apt autoremove
 sudo reboot
 ```
 
-* 安装Nvidia显卡驱动：
+* 安装显卡驱动：
 ```html
 sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源
 sudo apt update
