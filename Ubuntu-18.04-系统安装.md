@@ -14,9 +14,8 @@
 1. Ubuntu系统下载：官网下载Ubuntu18.04.05，桌面版，64位系统《Software01.Ubuntu 系统》。
 
 2. 利用UltraISO制作Ubuntu启动盘：
-
-  * 选择文件-->打开-->打开Ubuntu18.04.05.ISO。
-    * 备注1：Ubuntu18.04.01 Kernel为4.15.0，Ubuntu18.04.03Kernel为5.0.0。
+* 选择文件-->打开-->打开Ubuntu18.04.05.ISO。
+  * 备注1：Ubuntu18.04.01 Kernel为4.15.0，Ubuntu18.04.03Kernel为5.0.0。
 
 * 选择启动-->写入硬盘映像（最好RAW格式写入），选择插入的USB2.0 U盘，点击写入。
   * 备注1：若选择U盘启动后，出现Failed to load ldlinux.c32问题，可以尝试使用“rufus”软件写入镜像《Software01.Ubuntu 系统》。
