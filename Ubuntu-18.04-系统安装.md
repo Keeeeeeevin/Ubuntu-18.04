@@ -44,30 +44,48 @@ sudo touch blacklist-nouveau.conf
 sudo chmod a+x blacklist-nouveau.conf
 sudo gedit blacklist-nouveau.conf
 ```
-2）打开的文件中输入：
+
+* 在打开的文件中输入：
+```html
 blacklist nouveau
 options nouveau modeset=0
-3）保存、关闭文件，然后：
+```
+
+* 保存、关闭文件，然后执行：
+```html
 sudo update-initramfs -u
 sudo reboot
-4）执行下面命令，若无任何输出，则关闭nouveau成功。
+```
+
+* 执行以下命令，若无任何输出，则关闭nouveau成功。
+```html
 lsmod | grep nouveau
-3安装显卡驱动
-1）如果原来通过apt-get方式安装过显卡驱动，则先按以下方式卸载：
+```
+
+2. 安装显卡驱动
+
+* 若原来通过apt-get方式安装过显卡驱动，则先按以下方式卸载：
+```html
 sudo apt-get remove --purge nvidia*
 sudo apt autoremove
 sudo reboot
-2）安装Nvidia显卡驱动：
+```
+
+* 安装Nvidia显卡驱动：
+```html
 sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源
 sudo apt update
 ubuntu-drivers devices#列出可选驱动
 sudo apt install nvidia-driver-430（Dell）
 sudo apt install nvidia-driver-440（2080Ti）
 sudo apt install nvidia-driver-440（RTX3000）
-3）测试指令，若列出独立显卡信息，则安装成功
+```
+
+* 测试指令，若列出独立显卡信息，则安装成功
+```html
 sudo reboot
 nvidia-smi
-
+```
 
 
 
