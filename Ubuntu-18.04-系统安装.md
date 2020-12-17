@@ -87,5 +87,36 @@ sudo reboot
 nvidia-smi
 ```
 
+# 安装配置Win10+Ubuntu18.04.05双系统（双硬盘，台式机）
+----------
+
+0. 基本同上，注意事项：
+
+* Boot采用UEFI模式。
+
+* Windwos系统采用清华1903英文版，中文版激活失败。
+
+* 安装系统时，显示器插在核显口，2080Ti暂无驱动，否则花屏。
+
+* 若未安装网卡（最好安装一个，避免麻烦），可利用路由器将无线Wifi信号转为有线信号接入网络。电脑联网后，可选择安装USB转无线网卡驱动，具体为：
+  * 插入usb转无线网卡，执行lsusb查看型号（例如RTL8812AU）
+  * 执行命令安装驱动
+```html
+sudo apt-get update
+sudo apt-get install rtl8812au-dkms
+```
+* 若UEFI的Security Boot开启，则需要在装完驱动重启时输入MOK，较繁琐。建议在安装显卡驱动前直接禁用Security Boot，2080Ti电脑的禁用Security Boot的方法为：进入Boot单击Advanced Mode双击Secure Boot双击Key Management双击Clear Secure Boot Keys查看Secure Boot状态为Disable保存后退出Boot。
+
+* 安装完显卡驱动后，将显示线接入2080Ti独立显卡。若在启动过程出现PCIE Bus Error字样，则：
+  * 启动时，在选择界面光标停留在Ubuntu上，按“e”键进入编辑模式
+  * 在以linux开头的行的最后加上pcie_aspm=off，按ctrl+x便可顺利进入图形界面
+  * 执行命令sudo gedit /etc/default/grub，编辑文本，在GRUB_CMDLINE_LINUX_DEFAULT行双引号内补充上pcie_aspm=off，并且执行sudo update-grub命令即可。
+
+* 如果要删除原来安装的Ubuntu系统，操作如下：
+  * 利用PE系统删除分区，以及Windows引导盘（约300M）中的/efi/ubuntu文件夹
+  * 在Windows系统中安装Easy UEFI软件（已下载，《Software01.Ubuntu》文件夹），删除其中对应的Ubuntu启动项
+
+
+
 
 
