@@ -21,7 +21,7 @@ tar -cvpzf ubuntu_backup@`date +%Y-%m-%d`.tar.gz --exclude=ubuntu_backup@`date +
   * -p： 保存权限，并应用到所有文件 
   * -z： 用gzip压缩备份文档，减小空间 
   * -f： 指定备份文件的路径 
-  * –exclude： 排除指定目录，不进行备份
+  * -exclude： 排除指定目录，不进行备份
 
 
 
