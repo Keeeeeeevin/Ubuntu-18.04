@@ -25,7 +25,7 @@ tar -cvpzf ubuntu_backup@`date +%Y-%m-%d`.tar.gz --exclude=ubuntu_backup@`date +
 
 
 
-
+----------
 # 系统还原
 ----------
 
