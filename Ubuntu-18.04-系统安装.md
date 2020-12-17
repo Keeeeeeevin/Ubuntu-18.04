@@ -28,11 +28,44 @@
 
 4. U盘启动，安装Ubuntu系统，过程中不联网，不安装第三方软件，语言选择English，安装类型选择“与Windows共存”即可。
 
-5. 完成安装：
-
-* 完成安装重启计算机。
+* 完成安装后重启计算机。
   * 备注1：重启系统，首先进入Win10，界面无进入Ubuntu选项，则用“EasyBCD软件”重建引导。
   * 备注2：重启系统，能够进入Ubuntu和Win10系统，但是Ubuntu系统界面卡死等，是Nvidia显卡问题，需独立显卡驱动。
+
+## 3. Ubuntu系统Nidia显卡驱动
+----------
+
+1. 关闭nouveau，具体为：
+
+* 在/etc/modprobe.d目录下创建blacklist-nouveau.conf文件，并修改权限：
+cd /etc/modprobe.d
+sudo touch blacklist-nouveau.conf
+sudo chmod a+x blacklist-nouveau.conf
+sudo gedit blacklist-nouveau.conf
+2）打开的文件中输入：
+blacklist nouveau
+options nouveau modeset=0
+3）保存、关闭文件，然后：
+sudo update-initramfs -u
+sudo reboot
+4）执行下面命令，若无任何输出，则关闭nouveau成功。
+lsmod | grep nouveau
+3安装显卡驱动
+1）如果原来通过apt-get方式安装过显卡驱动，则先按以下方式卸载：
+sudo apt-get remove --purge nvidia*
+sudo apt autoremove
+sudo reboot
+2）安装Nvidia显卡驱动：
+sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源
+sudo apt update
+ubuntu-drivers devices#列出可选驱动
+sudo apt install nvidia-driver-430（Dell）
+sudo apt install nvidia-driver-440（2080Ti）
+sudo apt install nvidia-driver-440（RTX3000）
+3）测试指令，若列出独立显卡信息，则安装成功
+sudo reboot
+nvidia-smi
+
 
 
 
