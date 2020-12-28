@@ -4,7 +4,7 @@
 sudo apt install rospack-tools
 
 
-（2）在sudo rosdep init时出现的错误
+（2）在sudo 
 ERROR: cannot download default sources list from: https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list
 
 (base) kevin@kevin-Precision:~$ sudo rosdep init
@@ -21,3 +21,5 @@ sudo gedit /etc/hosts
 #保存后退出再尝试
 
 duoshijici,yekeyichenggongde jihui
+换网络
+关闭VPN？
