@@ -182,8 +182,10 @@ conda activate tf_py37（或者conda activate torch_py37）
 pip install -e ‘.[all]’
 ```
 * 备注：若没提前安装MuJoCo，需要注释setup.py文件中和MuJoCo有关的安装选项（共两行）
-* # 'mujoco': ['mujoco_py>=1.50', 'imageio']
-* # 'robotics': ['mujoco_py>=1.50', 'imageio']
+```html
+# 'mujoco': ['mujoco_py>=1.50', 'imageio']
+# 'robotics': ['mujoco_py>=1.50', 'imageio']
+```
 
 ### 7.2. 最新版本的gym和universe不兼容，如果需要universe则按照下面版本安装（暂不需要）
 1  激活环境
