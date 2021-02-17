@@ -121,8 +121,8 @@ sudo ./Anaconda3-2019.07-Linux-x86_64.sh
 
 * 备注：需重新打开Terminal生效
 
-* 更换清华conda源，提升conda环境的下载速度  
-官方网址：https://mirror.tuna.tsinghua.edu.cn/help/anaconda/，按照官方网址操作即可。
+* 更换清华conda源，提升conda环境的下载速度（按照官方网址操作即可）  
+官方网址：https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
 
 * 基本操作
 ```html
