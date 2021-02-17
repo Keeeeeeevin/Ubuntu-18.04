@@ -212,14 +212,14 @@ pip install -e .
 ```html
 conda deactivate
 ```
-* 将Pycharm在home/kevin/Software/Pycharm文件夹解压
+* 将Pycharm在home/kevin/Software/文件夹解压
 * 安装
 ```html
-cd /home/kevin/Software/Pycharm/Pycharm-community-2019.2.2/bin
+cd /home/kevin/Software/Software/pycharm-community-2020.3.3/bin
 sudo ./pycharm.sh
 ```
 ### 8.3. 设置解释器
-* 选择右下角ConfigureSettingsProject InterpreterAddExisting environment
-* 选择解释器地址为：/home/kevin/.conda/envs/torch_py37/bin/python3（在该环境下安装了tensorflow）
+* IDE界面-->file-->Settings-->Project-->Python Interpreter-->设置符号-->Virtualenv Environment-->Existing enviroment
+* 选择解释器地址为：/home/kevin/.conda/envs/torch_py38/bin/python3
 * 选择：make available to all projects
 * 新建Project时，需要选择用现有的解释器
