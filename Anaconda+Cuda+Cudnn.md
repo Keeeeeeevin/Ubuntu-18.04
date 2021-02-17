@@ -77,18 +77,18 @@ source ~/.bashrc
 * 安装Cuda Sample到指定文件夹
 ```html
 cuda-install-samples-10.0.sh /home/kevin/Software/Cuda/Samples
-```html
+```
 
 * 编译Sample
 ```html
 cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples
 make –j4
-```html
+```
 
-* 测试Sample
+* 测试Sample（若最后显示PASS，则表明Cuda安装成功）
 ```html
 cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples/bin/x86_64/linux/release
-sudo ./deviceQuery（若最后显示PASS，则表明Cuda安装成功）
+sudo ./deviceQuery
 ```
 
 ## 3. Cudnn7.6.3
@@ -111,16 +111,22 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 * Anaconda是一个集成了众多科学计算包的python发行版，如numpy，scipy等，省去单独配置，可基于pyenv安装anaconda，也可单独安装
 
 ### 4.2. 安装Anaconda3
-1下载Anaconda3-2019.07-Linux-x86_64.sh文件
+* 下载Anaconda3-2019.07-Linux-x86_64.sh文件
 备注：已下载，《Software02.Anaconda_Cuda_Cudnn_Tensorflow》文件夹
-2安装Anaconda3
+* 安装Anaconda3
+```html
 sudo chmod +x ./Anaconda3-2019.07-Linux-x86_64.sh
 sudo ./Anaconda3-2019.07-Linux-x86_64.sh
-备注：需重新打开Terminal生效
-3更换清华conda源，提升conda环境的下载速度
+```
+
+* 备注：需重新打开Terminal生效
+
+* 更换清华conda源，提升conda环境的下载速度
 官方网址：https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
 按照官方网址操作即可。
-4基本操作
+
+* 基本操作
+```html
 conda create -n py37 python=3.7（创建环境）
 conda activate py37（激活环境）
 conda deactivate（退出环境）
@@ -128,6 +134,7 @@ conda remove -n py37 --all（删除环境）
 conda list（列出当前环境信息）
 conda env list（列出现有的环境）
 conda list -n=py37（列出环境中的安装包）
+```
 
 ## 5. TensorFlow
 1：激活Anaconda环境
