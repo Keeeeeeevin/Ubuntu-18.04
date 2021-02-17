@@ -118,6 +118,12 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 sudo chmod +x ./Anaconda3-2019.07-Linux-x86_64.sh
 sudo ./Anaconda3-2019.07-Linux-x86_64.sh
 ```
+* 问题解决：conda: command not found
+* 方法：在bashrc中加入以下内容，并source
+```html
+# anaconda
+export PATH=$PATH:/home/kevin/anaconda3/bin
+```
 
 * 备注：需重新打开Terminal生效
 
