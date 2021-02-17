@@ -43,10 +43,10 @@ lsmod | grep nouveau
 ```
 
 ### 2.4. 安装Cuda 10.0
-* 安装Cuda 10.0
+* 安装Cuda 10.0（除不安装显卡驱动外，其余按默认选择即可）
 ```html
 sudo chmod +x ./cuda_10.0.130_410.48_linux.run
-sudo ./cuda_10.0.130_410.48_linux.run --no-opengl-libs（除不安装显卡驱动外，其余按默认选择即可）
+sudo ./cuda_10.0.130_410.48_linux.run --no-opengl-libs
 ```
 
 * 备注：其中，410.48表示默认安装的显卡驱动版本，选择不安装。
