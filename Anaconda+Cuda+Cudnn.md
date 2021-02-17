@@ -60,7 +60,7 @@ sudo ./cuda_10.0.130.1_linux.run
 * 打开环境变量设置文件
 ```html
 sudo gedit ~/.bashrc
-```html
+```
 
 * 在bashrc文件末尾输入
 ```html
