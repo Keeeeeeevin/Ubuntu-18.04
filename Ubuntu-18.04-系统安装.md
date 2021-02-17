@@ -98,7 +98,7 @@ nvidia-smi
 sudo apt-get update  
 ```
 
-## 4. 更换pip源(pip install)
+## 5. 更换pip源(pip install)
 ----------
  
 * 清华pip源网址：https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
