@@ -142,12 +142,12 @@ conda list -n=py37（列出环境中的安装包）
 ```
 
 ## 5. TensorFlow
-1：激活Anaconda环境
+### 5.1. 激活Anaconda环境
 anaconda search -t conda tensorflow（看可以安装的版本，base环境中）
-conda create -n tf_py37 python=3.7（创建环境）
-conda activate tf_py37
-2：安装GPU版本TensorFlow，1.14.0版本
-conda install tensorflow-gpu=1.14.0
+conda create -n tf_py38 python=3.8（创建环境）
+conda activate tf_py38
+### 5.2. 安装GPU版本TensorFlow
+conda install tensorflow-gpu=2.2.0
 
 
 ## 6. PyTorch+TensorBoardX
