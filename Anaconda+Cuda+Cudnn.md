@@ -9,7 +9,7 @@
 * 备注：网址https://developer.nvidia.com/cuda-90-download-archive
 
 
-## 3. 确认系统状态
+### 2.1. 确认系统状态
 * 备注：若安装过程出现问题，最好的参考资料是10.0版本的官方文档《CUDA_Installation_Guide_Linux.pdf》
 * 在联网状态下，更新软件库
 ```html
