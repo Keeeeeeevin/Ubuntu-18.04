@@ -143,57 +143,79 @@ conda list -n=py37（列出环境中的安装包）
 
 ## 5. TensorFlow
 ### 5.1. 激活Anaconda环境
+```html
 anaconda search -t conda tensorflow（看可以安装的版本，base环境中）
-conda create -n tf_py38 python=3.8（创建环境）
+conda create -n tf_py38 python=3.8
 conda activate tf_py38
+```
 ### 5.2. 安装GPU版本TensorFlow
+```html
 conda install tensorflow-gpu=2.2.0
-
+```
 
 ## 6. PyTorch+TensorBoardX
-1：PyTorch是与TensorFlow分庭抗礼的框架
-2：新创建一个Anaconda环境并激活
-conda create -n torch_py37 python=3.7（创建环境）
+### 6.1. 新创建环境并激活
+```html
+conda create -n torch_py38 python=3.8
 conda activate torch_py37
-3：安装PyTorch
-备注：官方网址：https://pytorch.org，有不同Python，Cuda版本的安装说明。例如：利用Conda，在Python3.7及CUDA10.0版本下安装PyTorch的命令为：
-conda install pytorch torchvision cudatoolkit=10.1 –c pytorch（当前为1.3版本的PyTorch，查看更新）
+```
 
-4：安装TensorBoardX
-备注：参考官方网址：https://anaconda.org/conda-forge/tensorboardx，安装命令为：
+### 6.2. 安装PyTorch
+* 备注：官方网址：https://pytorch.org，有不同Python，Cuda版本的安装说明。例如：利用Conda，在Python3.7及CUDA10.0版本下安装PyTorch的命令为：
+```html
+conda install pytorch torchvision cudatoolkit=10.1 –c pytorch（当前为1.3版本的PyTorch，查看更新）
+```
+
+### 6.3. 安装TensorBoardX
+* 备注：参考官方网址：https://anaconda.org/conda-forge/tensorboardx，安装命令为：
+```html
 conda install -c conda-forge tensorboardx
+```
 
 ## 7. Docker、OpenAI-gym/Universe
-1：OpenAI-Gym安装方式（足够）
+
+### 7.1. OpenAI-Gym安装方式（足够）
+```html
 git clone https://github.com/openai/gym
 cd /home/kevin/Software/gym
 conda activate tf_py37（或者conda activate torch_py37）
 pip install -e ‘.[all]’
-备注：若没提前安装MuJoCo，需要注释setup.py文件中和MuJoCo有关的安装选项（共两行）
-# 'mujoco': ['mujoco_py>=1.50', 'imageio']
-# 'robotics': ['mujoco_py>=1.50', 'imageio']
-2：最新版本的gym和universe不兼容，如果需要universe则按照下面版本安装（暂不需要）
+```
+* 备注：若没提前安装MuJoCo，需要注释setup.py文件中和MuJoCo有关的安装选项（共两行）
+* # 'mujoco': ['mujoco_py>=1.50', 'imageio']
+* # 'robotics': ['mujoco_py>=1.50', 'imageio']
+
+### 7.2. 最新版本的gym和universe不兼容，如果需要universe则按照下面版本安装（暂不需要）
 1  激活环境
+```html
 conda activate tf_py37
+```
 2  安装Docker：https://docs.docker.com/install/linux/docker-ce/ubuntu/
 3  安装OpenAI-Gym
+```html
 pip install gym==0.9.5（以支持universe）
+```
 4  安装OpenAI-Universe：https://github.com/openai/universe
+```html
 cd universe
 pip install -e .
+```
 
 ## 8. PyCharm
-1：下载PyCharm（已下载，《Software04.IDE》文件夹）
-2：安装Pycharm
-1  退出Anaconda环境
+### 8.1. 下载PyCharm（已下载，《Software04.IDE》文件夹）
+### 8.2. 安装Pycharm
+* 退出Anaconda环境
+```html
 conda deactivate
-2  将Pycharm在home/kevin/Software/Pycharm文件夹解压
-3  安装
+```
+* 将Pycharm在home/kevin/Software/Pycharm文件夹解压
+* 安装
+```html
 cd /home/kevin/Software/Pycharm/Pycharm-community-2019.2.2/bin
 sudo ./pycharm.sh
-3：设置解释器
-1  选择右下角ConfigureSettingsProject InterpreterAddExisting environment
-2  选择解释器地址为：/home/kevin/.conda/envs/torch_py37/bin/python3（在该环境下安装了tensorflow）
-3  选择：make available to all projects
-4：新建Project时，需要选择用现有的解释器
-
+```
+### 8.3. 设置解释器
+* 选择右下角ConfigureSettingsProject InterpreterAddExisting environment
+* 选择解释器地址为：/home/kevin/.conda/envs/torch_py37/bin/python3（在该环境下安装了tensorflow）
+* 选择：make available to all projects
+* 新建Project时，需要选择用现有的解释器
