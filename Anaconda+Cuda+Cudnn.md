@@ -157,13 +157,13 @@ conda install tensorflow-gpu=2.2.0
 ### 6.1. 新创建环境并激活
 ```html
 conda create -n torch_py38 python=3.8
-conda activate torch_py37
+conda activate torch_py38
 ```
 
 ### 6.2. 安装PyTorch
 * 备注：官方网址：https://pytorch.org，有不同Python，Cuda版本的安装说明。例如：利用Conda，在Python3.7及CUDA10.0版本下安装PyTorch的命令为：
 ```html
-conda install pytorch torchvision cudatoolkit=10.1 –c pytorch（当前为1.3版本的PyTorch，查看更新）
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch（当前为1.3版本的PyTorch，查看更新）
 ```
 
 ### 6.3. 安装TensorBoardX
@@ -178,7 +178,7 @@ conda install -c conda-forge tensorboardx
 ```html
 git clone https://github.com/openai/gym
 cd /home/kevin/Software/gym
-conda activate tf_py37（或者conda activate torch_py37）
+conda activate tf_py38（或者conda activate torch_py38）
 pip install -e ‘.[all]’
 ```
 * 备注：若没提前安装MuJoCo，需要注释setup.py文件中和MuJoCo有关的安装选项（共两行）
@@ -190,7 +190,7 @@ pip install -e ‘.[all]’
 ### 7.2. 最新版本的gym和universe不兼容，如果需要universe则按照下面版本安装（暂不需要）
 1  激活环境
 ```html
-conda activate tf_py37
+conda activate tf_py38
 ```
 2  安装Docker：https://docs.docker.com/install/linux/docker-ce/ubuntu/
 3  安装OpenAI-Gym
