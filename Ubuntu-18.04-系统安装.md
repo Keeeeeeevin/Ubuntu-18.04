@@ -91,16 +91,16 @@ nvidia-smi
 ----------
 
 * 更换清华/中科大apt-get源，提升apt-get速度：  
-1）清华apt-get源网址：https:://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/，选择18.04版本，按照官方网址操作：
-备份/etc/apt/sources.list  
-将sources.list内容改为镜像网站中的内容  
-执行
+1）清华apt-get源网址：https:://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/，选择18.04版本，按照官方网址操作：  
+a) 备份/etc/apt/sources.list  
+b) 将sources.list内容改为镜像网站中的内容  
+c) 最后执行
 ```html
 sudo apt-get update  
 ```
 
 * 更换清华pip源，提升pip install速度  
-清华pip源网址：https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
+1) 清华pip源网址：https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 
 # 安装配置Win10+Ubuntu18.04.05双系统（双硬盘，台式机）
