@@ -73,9 +73,9 @@ sudo reboot
 
 * 安装显卡驱动：
 ```html
-sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源
+sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
-ubuntu-drivers devices#列出可选驱动
+ubuntu-drivers devices #列出可选驱动
 sudo apt install nvidia-driver-430（Dell）
 sudo apt install nvidia-driver-440（2080Ti）
 sudo apt install nvidia-driver-440（RTX3000）
