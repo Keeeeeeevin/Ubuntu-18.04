@@ -83,7 +83,7 @@ cuda-install-samples-10.0.sh /home/kevin/Software/Cuda/Samples
 * 编译Sample
 ```html
 cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples
-make –j4
+make -j4
 ```
 
 * 测试Sample（若最后显示PASS，则表明Cuda安装成功）
