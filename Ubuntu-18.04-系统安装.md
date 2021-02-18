@@ -90,10 +90,7 @@ nvidia-smi
 ## 4. 更换apt-get源
 ----------
 
-* 清华apt-get源网址(选择18.04版本)：
-```html
-https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
-```
+* 清华apt-get源网址(选择18.04版本)：https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 * 备份/etc/apt/sources.list  
 * 将sources.list内容改为镜像网站中的内容  
 * 最后执行
