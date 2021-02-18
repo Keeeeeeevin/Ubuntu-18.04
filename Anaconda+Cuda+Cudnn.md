@@ -64,6 +64,7 @@ sudo gedit ~/.bashrc
 
 * 在bashrc文件末尾输入
 ```html
+# cuda
 export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
