@@ -164,7 +164,7 @@ conda activate torch_py38
 * 备注：官方网址：https://pytorch.org
 * 有不同Python，Cuda版本的安装说明。例如：利用Conda，在Python3.7及CUDA10.0版本下安装PyTorch的命令为：
 ```html
-conda install pytorch torchvision cudatoolkit=10.1 -c pytorch（当前为1.3版本的PyTorch，查看更新）
+conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
 ```
 
 ### 6.3. 安装TensorBoardX
