@@ -132,13 +132,13 @@ export PATH=$PATH:/home/kevin/anaconda3/bin
 
 * 基本操作
 ```html
-conda create -n py37 python=3.7（创建环境）
-conda activate py37（激活环境）
+conda create -n py38 python=3.8（创建环境）
+conda activate py38（激活环境）
 conda deactivate（退出环境）
-conda remove -n py37 --all（删除环境）
+conda remove -n py38 --all（删除环境）
 conda list（列出当前环境信息）
 conda env list（列出现有的环境）
-conda list -n=py37（列出环境中的安装包）
+conda list -n=py38（列出环境中的安装包）
 ```
 
 ## 5. TensorFlow
