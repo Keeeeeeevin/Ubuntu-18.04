@@ -194,7 +194,7 @@ pip install -e ‘.[all]’
 ```html
 conda activate tf_py38
 ```
-2  安装Docker：https://docs.docker.com/install/linux/docker-ce/ubuntu/
+2  安装Docker：https://docs.docker.com/install/linux/docker-ce/ubuntu/  
 3  安装OpenAI-Gym
 ```html
 pip install gym==0.9.5（以支持universe）
