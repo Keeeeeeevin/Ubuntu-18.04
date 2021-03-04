@@ -77,7 +77,8 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 source ./devel/setup.bash
 
 # 运行节点：
-roslaunch zed_display_rviz display_zed.launch
+roslaunch zed_wrapper zedm.launch
+# 更多应用参考对应github仓库
 ```
 
 
