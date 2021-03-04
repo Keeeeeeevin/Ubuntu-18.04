@@ -32,7 +32,7 @@ mkdir build & cd build
 cmake ..
 sudo make install
 ```
-* 安装后,头文件安装在/usr/local/include/eigen3/
+* 安装后，头文件安装在/usr/local/include/eigen3/
 
 ----------
 
