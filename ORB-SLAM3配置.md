@@ -175,5 +175,18 @@ make -j
 # 备注，若cmake发现错误"ModuleNotFoundError: No Module Named 'rospkg'"，直接pip install rospkg即可。
 ```
 
+* 运行：
+```html
+# Terminal 1（ROS Core）
+roscore
+
+# Terminal 2（package: ORB-SLAM3 --> node: Stereo_Inertial）
+cd /home/kevin/ORB_SLAM3
+rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/EuRoC.yaml true
+
+# Terminal 3（rosbag play，Once ORB-SLAM3 has loaded the vocabulary, press space in the rosbag tab.）
+rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
+```
+
 ----------
 
