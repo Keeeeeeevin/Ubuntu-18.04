@@ -64,6 +64,7 @@ chmod +x ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
 ```
 * 安装ZED ROS Wrapper：https://github.com/stereolabs/zed-ros-wrapper
 ```html
+mkdir -p ~/catkin_zed/src
 cd ~/catkin_zed/src
 git clone https://github.com/stereolabs/zed-ros-wrapper.git
 cd ../
