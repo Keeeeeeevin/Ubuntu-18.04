@@ -91,7 +91,7 @@ Build-->Build All in "Release-kevin"
 # 备注：若出现“the working directory doesn't exist clion”等问题，需重新CMake，即File-->Reload CMake Project，然后再Build即可。
 ```
 
-* 运行（以双目惯性视觉SLAM为例）：
+## 2.3. 运行（以双目惯性视觉SLAM为例）：
 ```html
 Run-->Edit Configurations：设置Target=stereo_inertial_euroc，Executable=stereo_inertial_euroc，Program arguments为：
 
