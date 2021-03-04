@@ -61,6 +61,9 @@ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 ```html
 chmod +x ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
 .ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
+# 运行例子
+cd /usr/local/zed/tools
+./ZED_Depth_Viewer
 ```
 * 安装ZED ROS Wrapper：https://github.com/stereolabs/zed-ros-wrapper
 ```html
