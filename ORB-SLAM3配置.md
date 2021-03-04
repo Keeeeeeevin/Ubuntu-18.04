@@ -34,6 +34,10 @@ sudo make install
 ```
 * 安装后，头文件安装在/usr/local/include/eigen3/
 
+### 2.3. ROS
+* 参考ROS Installation部分。
+
+
 ----------
 
 
