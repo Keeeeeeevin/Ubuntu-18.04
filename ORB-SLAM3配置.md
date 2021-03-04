@@ -46,9 +46,9 @@ sudo make install
 * 建立~/WS文件夹，复制ORB-SLAM3-master到~/WS文件夹；打开Clion，在Clion中打开~/WS/ORB_SLAM3-master/CMakeLists.txt文件（Open as Project），即可打开ORB-SLAM工程。
 
 ## 2.2. 编译
-* 设置Clion编译方式（默认编译方式有问题）：
+* 设置Clion的编译方式（默认编译方式有问题）：
 ```html
-File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成选择Apply；
+File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成后Apply
 File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release，Toolchain=kevin，build options=-- -j 12
 ```
 * 编译第三方库：
@@ -58,7 +58,7 @@ File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release
 * 编译ORB-SLAM3
 ```html
 Build-->Build All in "Release-kevin"
-# 备注：若出现“the working directory doesn't exist clion”等问题，Clion需重新CMake，即File-->Reload CMake Project，然后再编译即可。
+# 备注：若出现“the working directory doesn't exist clion”等问题，需重新CMake，即File-->Reload CMake Project，然后再Build即可。
 ```
 
 * 运行：
