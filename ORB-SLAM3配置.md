@@ -43,6 +43,8 @@ sudo make install
 
 ## 2.1. IDE Clion
 * 将安装包在~/Software目录下解压，运行其中的~/Software/clion-2020.3.3/bin/clion.sh文件即可，需要chmod +x，赋予执行权限。
+* 建立~/WS文件夹，复制ORB-SLAM3-master到~/WS文件夹；打开Clion，在Clion中打开~/WS/ORB_SLAM3-master/CMakeLists.txt文件（project方式），即可打开ORB-SLAM工程。
+* 设置Clion编译选项：
 
 
 
