@@ -76,11 +76,24 @@ rosdep install --from-paths src --ignore-src -r -y
 catkin_make -DCMAKE_BUILD_TYPE=Release
 source ./devel/setup.bash
 
-# 运行节点：
+# 节点运行例子：
 roslaunch zed_wrapper zedm.launch
 # 更多应用参考对应github仓库
 ```
+* 安装ZED ROS Examples：https://github.com/stereolabs/zed-ros-examples
+```html
+cd ~/catkin_zed/src
+git clone https://github.com/stereolabs/zed-ros-examples.git
+cd ../
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make -DCMAKE_BUILD_TYPE=Release
+source ./devel/setup.bash
 
+# 节点运行例子：
+roslaunch zed_display_rviz display_zed.launch
+roslaunch zed_rtabmap_example zed_rtabmap.launch
+# 更多应用参考对应github仓库
+```
 
 
 ----------
