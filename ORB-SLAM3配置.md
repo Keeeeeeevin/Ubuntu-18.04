@@ -12,7 +12,7 @@
 https://docs.opencv.org/3.4.13/d7/d9f/tutorial_linux_install.html
 https://docs.opencv.org/master/db/d05/tutorial_config_reference.html
 ```
-* 备注：opencv 3.4.13和opencv-contrib 3.4.13以下载，不用再git clone
+* 备注：opencv 3.4.13和opencv-contrib 3.4.13已下载，不用再git clone。
 ```html
 cd ~/<my_working_directory>
 git clone https://github.com/opencv/opencv.git
