@@ -42,7 +42,7 @@ sudo make install
 # 2. ORB-SLAM3 Test
 
 ## 2.1. IDE Clion
-* 将安装包在~/Software目录下解压，运行其中的~/Software/clion-2020.3.3/bin/clion.sh文件即可，需要chmod +x，赋予执行权限
+* 将安装包在~/Software目录下解压，运行其中的~/Software/clion-2020.3.3/bin/clion.sh文件即可，需要chmod +x，赋予执行权限。
 
 
 
