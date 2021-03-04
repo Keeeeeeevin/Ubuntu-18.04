@@ -52,11 +52,15 @@ sudo make install
 
 ## 3.1. ZED mini驱动
 * 官网下载ZED SDK，选择Cuda对于版本：https://www.stereolabs.com/developers/release/
-* 确认Ubuntu所安装的Cuda和Cudnn版本。
-* 安装ZED_SDK
+* 特别注意，严格确认Ubuntu所安装的Cuda和Cudnn版本：
 ```html
-chmod +x ZED_SDK_Ubuntu16_cuda10.2_v3.1.2.run
-./ZED_SDK_Ubuntu16_cuda10.2_v3.1.2.run
+cat /usr/local/cuda/version.txt
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+```
+* 安装ZED_SDK：
+```html
+chmod +x ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
+.ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
 ```
 * 安装ZED ROS Wrapper：
 
