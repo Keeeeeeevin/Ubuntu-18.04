@@ -61,8 +61,12 @@ Build-->Build All in "Release-kevin"
 # 备注：若出现“the working directory doesn't exist clion”等问题，需重新CMake，即File-->Reload CMake Project，然后再Build即可。
 ```
 
-* 运行：
-
+* 运行（以双目惯性视觉SLAM为例）：
+```html
+Run-->Edit Configurations：设置Target=stereo_inertial_euroc，Executable=stereo_inertial_euroc，Program arguments为：
+/home/kevin/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/kevin/ORB_SLAM3/Examples/Stereo-Inertial/EuRoC.yaml /home/kevin/Documents/MH_05_difficult /home/kevin/ORB_SLAM3/Examples/Stereo-Inertial/EuRoC_TimeStamps/MH05.txt dataset-MH05_stereoi
+# 上述数据集已下载，完成后Run-->Run 'stereo_inertial_euroc'即可运行。
+```
 
 ----------
 
