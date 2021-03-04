@@ -39,16 +39,16 @@ sudo make install
 
 ----------
 
-## 2. ORB-SLAM3 Test
+# 2. ORB-SLAM3 Test
 
-# 2.1. IDE Clion
+## 2.1. IDE Clion
 
 
 
 
 ----------
 
-## 3. ORB-SLAM3 Test with ROS
+# 3. ORB-SLAM3 Test with ROS
 
 
 
