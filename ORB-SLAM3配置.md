@@ -51,10 +51,16 @@ sudo make install
 File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成选择Apply；
 File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release，Toolchain=kevin，build options=-- -j 12
 ```
-* 编译：
+* 编译第三方库：
+```html
+
+```
+* 编译ORB-SLAM3
 ```html
 Build-->Build All in "Release-kevin"
+# 备注：若出现“the working directory doesn't exist clion”等问题，Clion需重新CMake，即File-->Reload CMake Project，然后再编译即可。
 ```
+
 * 运行：
 
 
