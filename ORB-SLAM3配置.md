@@ -24,6 +24,18 @@ make -j7
 sudo make install
 ```
 
+### 2.3. Eigen 3.3.7
+* ORB-SLAM3 Tested with Eigen 3.1.0，实测Eigen 3.3.7也能适配。
+```html
+cd ~/<my_eigen_directory>
+mkdir build & cd build
+cmake ..
+sudo make install
+```
+* 安装后,头文件安装在/usr/local/include/eigen3/
+
 ----------
+
+
 
 
