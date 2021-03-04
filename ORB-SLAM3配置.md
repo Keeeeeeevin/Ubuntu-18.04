@@ -51,7 +51,7 @@ sudo make install
 File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成后Apply
 File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release，Toolchain=kevin，build options=-- -j 12
 ```
-* 编译第三方库及解压词典（参考ORB-SLAM3给出的build.sh文件）：
+* 编译第三方库及解压词典（参考ORB-SLAM3给出的build.sh文件，也可直接在Terminal中按照build.sh文件编译，而不采用IDE）：
 ```html
 echo "Configuring and building Thirdparty/DBoW2 ..."
 
