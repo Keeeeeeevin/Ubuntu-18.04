@@ -50,7 +50,7 @@ sudo make install
 
 # 3. ORB-SLAM3 Test with ROS
 
-## 3.1. ZED mini驱动
+## 3.1. ZED驱动
 * 官网下载ZED SDK，选择Cuda对于版本：https://www.stereolabs.com/developers/release/
 * 特别注意，严格确认Ubuntu所安装的Cuda和Cudnn版本：
 ```html
