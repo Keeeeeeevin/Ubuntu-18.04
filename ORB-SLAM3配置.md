@@ -155,7 +155,7 @@ roslaunch zed_rtabmap_example zed_rtabmap.launch
 ```
 
 ## 3.2. 方式1：按照build_ros.sh方法
-* 更改~/.bashrc，在其中加上以下内容病source：
+* 更改~/.bashrc，在其中加上以下内容并source，使得pakage目录在ROS_PACKAGE_PATH中：
 ```html
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/kevin/ORB_SLAM3/Examples/ROS
 ```
