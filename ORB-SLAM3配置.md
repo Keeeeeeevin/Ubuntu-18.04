@@ -154,6 +154,26 @@ roslaunch zed_rtabmap_example zed_rtabmap.launch
 # 更多应用参考对应github仓库
 ```
 
+## 3.2. 方式1：按照build_ros.sh方法
+* 更改~/.bashrc，在其中加上以下内容病source：
+```html
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/kevin/ORB_SLAM3/Examples/ROS
+```
+* 然后编译：
+```html
+chmod +x build_ros.sh
+./build_ros.sh
+```
+* 参考：文件build_ros.sh内容：
+```html
+cd Examples/ROS/ORB_SLAM3
+mkdir build
+cd build
+cmake .. -DROS_BUILD_TYPE=Release
+make -j
+
+# 备注，若cmake发现错误"ModuleNotFoundError: No Module Named 'rospkg'"，直接pip install rospkg即可。
+```
 
 ----------
 
