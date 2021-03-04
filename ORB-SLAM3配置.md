@@ -64,8 +64,10 @@ Build-->Build All in "Release-kevin"
 * 运行（以双目惯性视觉SLAM为例）：
 ```html
 Run-->Edit Configurations：设置Target=stereo_inertial_euroc，Executable=stereo_inertial_euroc，Program arguments为：
+
 /home/kevin/ORB_SLAM3/Vocabulary/ORBvoc.txt /home/kevin/ORB_SLAM3/Examples/Stereo-Inertial/EuRoC.yaml /home/kevin/Documents/MH_05_difficult /home/kevin/ORB_SLAM3/Examples/Stereo-Inertial/EuRoC_TimeStamps/MH05.txt dataset-MH05_stereoi
-# 上述数据集已下载，完成后Run-->Run 'stereo_inertial_euroc'即可运行。
+
+# 上述数据集已下载，设置完成后，Run-->Run 'stereo_inertial_euroc'即可运行。
 ```
 
 ----------
