@@ -51,9 +51,39 @@ sudo make install
 File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成后Apply
 File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release，Toolchain=kevin，build options=-- -j 12
 ```
-* 编译第三方库：
+* 编译第三方库及解压词典（参考ORB-SLAM3给出的build.sh文件）：
 ```html
+echo "Configuring and building Thirdparty/DBoW2 ..."
 
+cd Thirdparty/DBoW2
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j
+
+cd ../../g2o
+
+echo "Configuring and building Thirdparty/g2o ..."
+
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j
+
+cd ../../../
+
+echo "Uncompress vocabulary ..."
+
+cd Vocabulary
+tar -xf ORBvoc.txt.tar.gz
+cd ..
+
+echo "Configuring and building ORB_SLAM3 ..."
+
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j
 ```
 * 编译ORB-SLAM3
 ```html
