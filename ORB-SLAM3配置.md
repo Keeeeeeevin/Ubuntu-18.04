@@ -54,8 +54,9 @@ sudo make install
 ## 2.2. 编译
 * 设置Clion的编译方式（默认编译方式有问题）：
 ```html
-File-->Settings-->Build, Execution, Deployment-->Toolchains: 设置Name=kevin，CMake=cmake，Make=默认，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=/usr/bin/gdb，完成后Apply
-File-->Settings-->Build, Execution, Deployment-->CMake: 设置Build type=Release，Toolchain=kevin，build options=-- -j 12
+File-->Settings-->Build, Execution, Deployment-->Toolchains: 选择Default，设置Name=Default，CMake=cmake(/usr/bin/cmake)，Make=Detected:/usr/bin/make，C Compiler=/usr/bin/gcc，C++ Compiler=/usr/bin/g++，Debugger=gdb(/usr/bin/gdb)，完成后Apply
+File-->Settings-->Build, Execution, Deployment-->CMake: 选择Release，设置Name=Release，Build type=Release，Toolchain=Default，build options=-- -j 8
+File-->Settings-->Build, Execution, Deployment-->CMake: 选择Debug，  设置Name=Debug，  Build type=Debug，  Toolchain=Default，build options=-- -j 8
 ```
 * 编译第三方库及解压词典（参考ORB-SLAM3给出的build.sh文件，也可直接在Terminal中按照build.sh文件编译，而不采用IDE）：
 ```html
