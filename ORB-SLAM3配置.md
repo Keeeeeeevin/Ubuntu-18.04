@@ -200,6 +200,187 @@ rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /ca
 ```html
 https://www.jetbrains.com/help/clion/ros-setup-tutorial.html
 ```
+ 
+```html
+# Create and build a ROS workspace:
+mkdir -p ~/ros_ws/src
+cd ros_ws
+catkin_make
+
+# In the workspace, create a package:
+cd src
+catkin_create_pkg slam_pkg roscpp rospy std_msgs
+```
+
+* 将src/slam_pkg中的文档删除，替换为备份文档（文件结构变化，以便于编译、调试等），例如CMakeLists.txt文档变为：
+```html
+cmake_minimum_required(VERSION 2.8)
+project(slam_pkg) # ZQ
+
+IF(NOT CMAKE_BUILD_TYPE)
+  SET(CMAKE_BUILD_TYPE Release)
+ENDIF()
+
+MESSAGE("Build type: " ${CMAKE_BUILD_TYPE})
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -Wall   -O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall   -O3")
+set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -march=native")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -march=native")
+
+# set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wno-deprecated -O3 -march=native ")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-deprecated -O3 -march=native")
+
+# Check C++11 or C++0x support
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+if(COMPILER_SUPPORTS_CXX11)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+   add_definitions(-DCOMPILEDWITHC11)
+   message(STATUS "Using flag -std=c++11.")
+elseif(COMPILER_SUPPORTS_CXX0X)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+   add_definitions(-DCOMPILEDWITHC0X)
+   message(STATUS "Using flag -std=c++0x.")
+else()
+   message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+endif()
+
+LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+find_package(OpenCV 3)
+if(NOT OpenCV_FOUND)
+   find_package(OpenCV 2.4.3 QUIET)
+   if(NOT OpenCV_FOUND)
+      message(FATAL_ERROR "OpenCV > 2.4.3 not found.")
+   endif()
+endif()
+
+MESSAGE("OPENCV VERSION:")
+MESSAGE(${OpenCV_VERSION})
+
+find_package(Eigen3 3.1.0 REQUIRED)
+find_package(Pangolin REQUIRED)
+
+find_package(catkin REQUIRED COMPONENTS # ZQ
+  cv_bridge
+  dynamic_reconfigure
+  geometry_msgs
+  sensor_msgs
+  std_msgs
+  std_srvs
+  message_generation
+  message_filters
+  roscpp
+  rospy
+  roslib
+)
+
+include_directories(
+${PROJECT_SOURCE_DIR}
+${PROJECT_SOURCE_DIR}/include
+${PROJECT_SOURCE_DIR}/include/CameraModels
+${PROJECT_SOURCE_DIR}/src # ZQ
+${EIGEN3_INCLUDE_DIR}
+${Pangolin_INCLUDE_DIRS}
+)
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+
+set(ORBSLAM3_SOURCE_FILES # ZQ
+src/System.cc
+src/Tracking.cc
+src/LocalMapping.cc
+src/LoopClosing.cc
+src/ORBextractor.cc
+src/ORBmatcher.cc
+src/FrameDrawer.cc
+src/Converter.cc
+src/MapPoint.cc
+src/KeyFrame.cc
+src/Atlas.cc
+src/Map.cc
+src/MapDrawer.cc
+src/Optimizer.cc
+src/PnPsolver.cc
+src/Frame.cc
+src/KeyFrameDatabase.cc
+src/Sim3Solver.cc
+src/Initializer.cc
+src/Viewer.cc
+src/ImuTypes.cc
+src/G2oTypes.cc
+src/CameraModels/Pinhole.cpp
+src/CameraModels/KannalaBrandt8.cpp
+src/OptimizableTypes.cpp
+src/MLPnPsolver.cpp
+include/System.h
+include/Tracking.h
+include/LocalMapping.h
+include/LoopClosing.h
+include/ORBextractor.h
+include/ORBmatcher.h
+include/FrameDrawer.h
+include/Converter.h
+include/MapPoint.h
+include/KeyFrame.h
+include/Atlas.h
+include/Map.h
+include/MapDrawer.h
+include/Optimizer.h
+include/PnPsolver.h
+include/Frame.h
+include/KeyFrameDatabase.h
+include/Sim3Solver.h
+include/Initializer.h
+include/Viewer.h
+include/ImuTypes.h
+include/G2oTypes.h
+include/CameraModels/GeometricCamera.h
+include/CameraModels/Pinhole.h
+include/CameraModels/KannalaBrandt8.h
+include/OptimizableTypes.h
+include/MLPnPsolver.h
+include/TwoViewReconstruction.h
+src/TwoViewReconstruction.cc)
+
+# ZQ add_subdirectory(Thirdparty/g2o)
+
+set(LIBS # ZQ
+        ${OpenCV_LIBS}
+        ${EIGEN3_LIBS}
+        ${Pangolin_LIBRARIES}
+        ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+        ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+        -lboost_serialization
+        -lcrypto
+)
+
+include_directories( # ZQ
+  ${catkin_INCLUDE_DIRS}
+)
+
+# Build examples
+
+add_executable( # ZQ
+    stereo_ros_inertial Examples/ros_stereo_inertial.cc ${ORBSLAM3_SOURCE_FILES})
+
+target_link_libraries( # ZQ
+    stereo_ros_inertial ${catkin_LIBRARIES} ${LIBS} )
+```
+
+# Source the workspace: 
+cd ~/ros_ws
+source ./devel/setup.bash
+
+# launch CLion in the same terminal:
+# 在source的terminal中，打开clion.sh
+sh ~/Software/clion-2020.3.2/bin/clion.sh
+
+
+
+```
 
 ----------
 
