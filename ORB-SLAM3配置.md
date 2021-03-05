@@ -213,8 +213,8 @@ cd src
 catkin_create_pkg slam_pkg roscpp rospy std_msgs
 ```
 
-* 将src/slam_pkg中原文档删除，替换为备份文档，对应CMakeLists.txt变为：
-* 备注：备份文档仅变化了文件结构，以便于编译、调试等，在官方原代码基础上很容易得到。
+* 将src/slam_pkg中原文档删除，替换为备份工程，对应CMakeLists.txt变为：
+* 备注：备份工程相比原工程仅变化了文件结构，以便于编译、调试等，在官方原代码基础上很容易得到。
 ```html
 cmake_minimum_required(VERSION 2.8)
 project(slam_pkg) # ZQ
@@ -394,6 +394,11 @@ sh ~/Software/clion-2020.3.2/bin/clion.sh
 
 # 在Clion中open--> slam_pkg目录下的CMakeLists.txt文件（Open as Project）。
 ```
+
+* 设置Clion的编译方式（默认编译方式有问题，参考前例）。
+* 编译工程：Build --> Build Project，或：Build --> Build "stereo_ros_inertial"，编译工程。
+* 运行：
+
 
 ----------
 
