@@ -402,9 +402,10 @@ sh ~/Software/clion-2020.3.2/bin/clion.sh
 # Terminal 1（ROS Core）
 roscore
 
-# Terminal 2（package: ORB-SLAM3 --> node: Stereo_Inertial）
-cd /home/kevin/ORB_SLAM3
-rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/EuRoC.yaml true
+# Clion（package: slam_pkg --> node: Stereo_Inertial）
+Run --> Edit Configurations
+设置：Program arguments = Vocabulary/ORBvoc.txt Examples/EuRoC.yaml true（根据情况设定，也可设定为绝对目录）
+设置：Working Directory = /home/kevin/ros_ws/src/slam_pkg（slam_pkg所在目录）
 
 # Terminal 3（rosbag play，Once ORB-SLAM3 has loaded the vocabulary, press space in the rosbag tab.）
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
