@@ -396,9 +396,19 @@ sh ~/Software/clion-2020.3.2/bin/clion.sh
 ```
 
 * 设置Clion的编译方式（默认编译方式有问题，参考前例）。
-* 编译工程：Build --> Build Project，或：Build --> Build "stereo_ros_inertial"，编译工程。
+* 编译工程：Build --> Build Project，或：Build --> Build "stereo_ros_inertial"，编译工程（CLion右上角可选择Release或Debug模式）。
 * 运行：
+```html
+# Terminal 1（ROS Core）
+roscore
 
+# Terminal 2（package: ORB-SLAM3 --> node: Stereo_Inertial）
+cd /home/kevin/ORB_SLAM3
+rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/EuRoC.yaml true
+
+# Terminal 3（rosbag play，Once ORB-SLAM3 has loaded the vocabulary, press space in the rosbag tab.）
+rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
+```
 
 ----------
 
