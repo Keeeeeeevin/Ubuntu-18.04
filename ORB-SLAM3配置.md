@@ -195,7 +195,7 @@ rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
-## 3.2. 方式2：CLion中编译并运行，需修改CMakeLists.txt文件和文档结构（可调式）
+## 3.3. 方式2：CLion中编译并运行，需修改CMakeLists.txt文件和文档结构（可调式）
 * CLion开发ROS程序的官方教程：
 ```html
 https://www.jetbrains.com/help/clion/ros-setup-tutorial.html
