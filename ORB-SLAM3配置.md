@@ -380,7 +380,7 @@ target_link_libraries( # ZQ
 #include"../include/System.h"
 ```
 
-* 编译第三方库，解压词典（参考前例）。
+* 编译第三方库，并解压词典（参考前例）。
 
 
 * 打开CLion，并打开slam_pkg工程：
