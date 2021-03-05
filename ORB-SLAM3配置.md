@@ -12,6 +12,9 @@
 # 3.2.0
 https://docs.opencv.org/3.2.0/d7/d9f/tutorial_linux_install.html
 
+# OpenCV CMake configuration reference
+https://docs.opencv.org/master/db/d05/tutorial_config_reference.html
+
 # 3.4.13
 https://docs.opencv.org/3.4.13/d7/d9f/tutorial_linux_install.html
 ```
