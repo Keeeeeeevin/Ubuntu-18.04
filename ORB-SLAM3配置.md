@@ -200,7 +200,8 @@ rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /ca
 ```html
 https://www.jetbrains.com/help/clion/ros-setup-tutorial.html
 ```
- 
+
+* 创建ROS Catkin Workspace和Package：
 ```html
 # Create and build a ROS workspace:
 mkdir -p ~/ros_ws/src
@@ -362,13 +363,22 @@ include_directories( # ZQ
 )
 
 # Build examples
-
 add_executable( # ZQ
     stereo_ros_inertial Examples/ros_stereo_inertial.cc ${ORBSLAM3_SOURCE_FILES})
 
 target_link_libraries( # ZQ
     stereo_ros_inertial ${catkin_LIBRARIES} ${LIBS} )
 ```
+
+* 代码更改
+```html
+# 由于文件结构变化，文档ros_stereo_inertial.cc第34行代码需更新，原为：
+#include"../../../include/System.h"
+
+# 更改为：
+#include"../include/System.h"
+```
+
 
 # Source the workspace: 
 cd ~/ros_ws
