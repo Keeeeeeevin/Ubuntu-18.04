@@ -411,5 +411,13 @@ Run --> Edit Configurations
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
+```html
+# zed_camera.launch.xml
+<remap from="/zedm/zed_node/left_raw/image_raw_color" to="/camera/left/image_raw" /> 
+<remap from="/zedm/zed_node/right_raw/image_raw_color" to="/camera/right/image_raw" /> 
+<remap from="/zedm/zed_node/imu/data_raw" to="/imu" />  
+```
+
 ----------
+
 
