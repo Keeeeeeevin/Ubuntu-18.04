@@ -195,7 +195,7 @@ rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
-## 3.2. 方式2：CLion中编译并运行的方法，需修改CMakeLists.txt文件和文档结构（推荐，可调式）
+## 3.2. 方式2：CLion中编译并运行，需修改CMakeLists.txt文件和文档结构（可调式）
 * CLion开发ROS程序的官方教程：
 ```html
 https://www.jetbrains.com/help/clion/ros-setup-tutorial.html
@@ -213,7 +213,8 @@ cd src
 catkin_create_pkg slam_pkg roscpp rospy std_msgs
 ```
 
-* 将src/slam_pkg中的文档删除，替换为备份文档（文件结构变化，以便于编译、调试等），例如CMakeLists.txt文档变为：
+* 将src/slam_pkg中原文档删除，替换为备份文档，对应CMakeLists.txt变为：
+* 备注：备份文档仅变化了文件结构，以便于编译、调试等，在官方原代码基础上很容易得到。
 ```html
 cmake_minimum_required(VERSION 2.8)
 project(slam_pkg) # ZQ
@@ -379,17 +380,19 @@ target_link_libraries( # ZQ
 #include"../include/System.h"
 ```
 
+* 编译第三方库，解压词典（参考前例）。
 
+
+* 打开CLion，并打开slam_pkg工程：
+```html
 # Source the workspace: 
 cd ~/ros_ws
 source ./devel/setup.bash
 
-# launch CLion in the same terminal:
-# 在source的terminal中，打开clion.sh
+# 在source的terminal中，打开clion.sh，以便clion能够找到ros相关package：
 sh ~/Software/clion-2020.3.2/bin/clion.sh
 
-
-
+# 在Clion中open--> slam_pkg目录下的CMakeLists.txt文件（Open as Project）。
 ```
 
 ----------
