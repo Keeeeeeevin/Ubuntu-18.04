@@ -116,7 +116,8 @@ Run-->Debug 'stereo_inertial_euroc'
 
 # 3. ORB-SLAM3 Test with ROS
 
-## 3.1.1 ZED驱动
+## 3.1 ZED
+### 3.1.1 ZED驱动
 * 官网下载ZED SDK，选择Cuda对于版本：https://www.stereolabs.com/developers/release/
 * 特别注意，严格确认Ubuntu所安装的Cuda和Cudnn版本：
 ```html
@@ -161,25 +162,24 @@ roslaunch zed_rtabmap_example zed_rtabmap.launch
 # 更多应用参考对应github仓库
 ```
 
-## 3.1.2 IMU标定
-参考：https://github.com/rpng/kalibr_allan
+### 3.1.2 ZED双目相机标定
+* 参考ROS Wiki教程，官方package：http://wiki.ros.org/camera_calibration/Tutorials/StereoCalibration
 
-解决matlab找不到问题：
-My Matlab is installed in /usr/local/MATLAB/R2018a/bin, and I replace
+### 3.1.3 IMU标定
+* 参考：https://github.com/rpng/kalibr_allan
+* 需要安装Mablab，参考：常用软件配置.md
+* 解决编译上述 package 过程中找不到matlab的问题：https://github.com/rpng/kalibr_allan/issues/5
+```html
+解决办法：更改package bagconvert中提供的/cmake/FindMatlab.cmake文件，具体如下。
+在FindMatlab.cmake中：
+原来为：find_program(MATLAB_EXE_PATH matlab PATHS /usr/local/bin)
+更改为：find_program(MATLAB_EXE_PATH matlab PATHS /usr/local/Matlab/R2019a/bin)
+其中，/usr/local/Matlab/R2019a/bin为实际安装目录。
+更改完毕后，删除build文件夹，重新catkin_make即可，即：rm -rf build/ && catkin_make
+```
 
-    find_program(MATLAB_EXE_PATH matlab
-            PATHS /usr/local/bin)
-
-to
-
-    find_program(MATLAB_EXE_PATH matlab
-            PATHS /usr/local/MATLAB/R2018a/bin)
-
-then
-rm -rf build/ && catkin_make
-it works.
-
-https://github.com/rpng/kalibr_allan/issues/5
+### 3.1.4 ZED IMU联合标定
+参考：
 
 
 ## 3.2. 方式1：Terminal下按照build_ros.sh编译并运行的方法
