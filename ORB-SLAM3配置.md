@@ -179,10 +179,11 @@ roslaunch zed_rtabmap_example zed_rtabmap.launch
 ```
 
 ### 3.1.4 ZED IMU联合标定
-参考：
+* 参考：
 
 
-## 3.2. 方式1：Terminal下按照build_ros.sh编译并运行的方法
+
+## 3.2. 利用EuRoC数据集测试，方式一：Terminal下按照build_ros.sh编译并运行的方法
 * 更改~/.bashrc，在其中加上以下内容并source，使得pakage目录在ROS_PACKAGE_PATH中：
 ```html
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/kevin/ORB_SLAM3/Examples/ROS
@@ -216,7 +217,7 @@ rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
-## 3.3. 方式2：CLion中编译并运行，需修改CMakeLists.txt文件和文档结构（可调式）
+## 3.3. 利用EuRoC数据集测试，方式二：CLion中编译并运行，需修改CMakeLists.txt文件和文档结构（可调式）
 * CLion开发ROS程序的官方教程：
 ```html
 https://www.jetbrains.com/help/clion/ros-setup-tutorial.html
@@ -432,13 +433,13 @@ Run --> Edit Configurations
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
+## 3.3. 利用ZED实时数据测试：
 ```html
 # zed_camera.launch.xml
 <remap from="/zedm/zed_node/left_raw/image_raw_color" to="/camera/left/image_raw" /> 
 <remap from="/zedm/zed_node/right_raw/image_raw_color" to="/camera/right/image_raw" /> 
 <remap from="/zedm/zed_node/imu/data_raw" to="/imu" />  
 ```
-
 ----------
 
 
