@@ -116,7 +116,7 @@ Run-->Debug 'stereo_inertial_euroc'
 
 # 3. ORB-SLAM3 Test with ROS
 
-## 3.1. ZED驱动
+## 3.1.1 ZED驱动
 * 官网下载ZED SDK，选择Cuda对于版本：https://www.stereolabs.com/developers/release/
 * 特别注意，严格确认Ubuntu所安装的Cuda和Cudnn版本：
 ```html
@@ -160,6 +160,27 @@ roslaunch zed_display_rviz display_zed.launch
 roslaunch zed_rtabmap_example zed_rtabmap.launch
 # 更多应用参考对应github仓库
 ```
+
+## 3.1.2 IMU标定
+参考：https://github.com/rpng/kalibr_allan
+
+解决matlab找不到问题：
+My Matlab is installed in /usr/local/MATLAB/R2018a/bin, and I replace
+
+    find_program(MATLAB_EXE_PATH matlab
+            PATHS /usr/local/bin)
+
+to
+
+    find_program(MATLAB_EXE_PATH matlab
+            PATHS /usr/local/MATLAB/R2018a/bin)
+
+then
+rm -rf build/ && catkin_make
+it works.
+
+https://github.com/rpng/kalibr_allan/issues/5
+
 
 ## 3.2. 方式1：Terminal下按照build_ros.sh编译并运行的方法
 * 更改~/.bashrc，在其中加上以下内容并source，使得pakage目录在ROS_PACKAGE_PATH中：
