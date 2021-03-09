@@ -433,13 +433,130 @@ Run --> Edit Configurations
 rosbag play --pause V1_02_medium.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw /imu0:=/imu
 ```
 
-## 3.3. 利用ZED实时数据测试：
+## 3.4. 利用ZED实时数据驱动测试：
 ```html
 # zed_camera.launch.xml
 <remap from="/zedm/zed_node/left_raw/image_raw_color" to="/camera/left/image_raw" /> 
 <remap from="/zedm/zed_node/right_raw/image_raw_color" to="/camera/right/image_raw" /> 
 <remap from="/zedm/zed_node/imu/data_raw" to="/imu" />  
 ```
+
+zedm_20210308.yaml：
+```html
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+Camera.type: "PinHole"
+
+# Camera calibration and distortion parameters (OpenCV) (equal for both cameras after stereo rectification)
+Camera.fx: 674.48202
+Camera.fy: 674.48202
+Camera.cx: 646.39745
+Camera.cy: 360.75280
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+Camera.width: 1280
+Camera.height: 720
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# stereo baseline times fx, bf = 62.9529381e-3*671.913879 = 42.2989528
+Camera.bf: 42.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 50.0 # 35
+
+# Transformation from camera 0 to body-frame (imu) ########
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 0.0,  0.0,  1.0,  0.0,
+          -1.0,  0.0,  0.0,  0.0,
+           0.0, -1.0,  0.0,  0.0,
+           0.0,  0.0,  0.0,  1.0]
+
+# IMU noise
+# IMU noise
+IMU.NoiseGyro: 0.000096 
+IMU.NoiseAcc: 0.001475
+
+IMU.GyroWalk: 0.000005
+IMU.AccWalk: 0.000135
+IMU.Frequency: 563
+
+#--------------------------------------------------------------------------------------------
+# Stereo Rectification. Only if you need to pre-rectify the images.
+# Camera.fx, .fy, etc must be the same as in LEFT.P
+#--------------------------------------------------------------------------------------------
+LEFT.height: 720
+LEFT.width: 1280
+LEFT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: f
+   data:[-0.172462, 0.026349, 0.000830, 0.000336, 0.000000]
+LEFT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 692.9325 ,    0.     ,  635.30637,
+             0.     ,  699.28716,  351.49027,
+             0.     ,    0.     ,    1.     ]
+LEFT.R: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 0.99999957, -0.00039583,  0.00083887,
+           0.00039815,  0.99999607, -0.00277336,
+          -0.00083777,  0.00277369,  0.9999958 ]
+LEFT.P: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 674.48202,    0.     ,  646.39745,    0.     ,
+             0.     ,  674.48202,  360.7528 ,    0.     ,
+             0.     ,    0.     ,    1.     ,    0.     ]
+
+RIGHT.height: 720
+RIGHT.width: 1280
+RIGHT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: f
+   data:[-0.173237, 0.027967, -0.000110, 0.000710, 0.000000]
+RIGHT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 694.27594,    0.     ,  655.31499,
+             0.     ,  700.41263,  368.41458,
+             0.     ,    0.     ,    1.     ]
+RIGHT.R:  !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 0.99998896,  0.00073808,  0.00464162,
+          -0.00075095,  0.99999588,  0.00277179,
+          -0.00463956, -0.00277525,  0.99998539]
+RIGHT.P:  !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 674.48202,    0.     ,  646.39745,  -42.12638,
+             0.     ,  674.48202,  360.7528 ,    0.     ,
+             0.     ,    0.     ,    1.     ,    0.     ]
+```html
+
+
 ----------
 
 
