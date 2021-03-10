@@ -76,7 +76,7 @@ SDK下载相关文件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_down
 * Step 03: 安装
 ```html
 1. Flashing...
-2. Host Computer的SDK manager在Tx2中烧录完系统后，在TX2的屏幕上需要进行初始化设置，例如用户名、密码、键盘布局等；
+2. Host Computer的SDK manager在Tx2中烧录完系统后，在TX2的屏幕上需要进行初始化设置，例如计算机名称(=kevin-tx2)、用户名(=kevin)、密码(=1)、键盘布局等；
 3. 登入TX2系统，进入系统桌面（此时系统为纯净版，还未安装cuda\opencv等）；
 4. Host Computer的SDK manager会弹出登录选项，输入刚才设置的tx2用户名和密码，然后Host Computer的SDK manager会继续在tx2中安装剩余软件；
 ```
