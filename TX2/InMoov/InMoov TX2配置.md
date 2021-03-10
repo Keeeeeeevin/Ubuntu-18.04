@@ -53,7 +53,7 @@ sudo apt-get install libqt5serialport5-dev
 * 关于/dev/ttyUSB0权限的问题：
 ```html
 # 初始状态，通过”ls -l /dev/ttyUSB0“，可查看其权限，为：/c/rw-/rw-/---/，即：所有者user(rw-=4+2+0)/群组group(rw-=4+2+0)/其他人other(---=0+0+0)
-# QtCreator不具备读写该串口的权限，所以打不开
+# QtCreator不具备读写该串口的权限，所以打不开（一定不要用管理员权限运行QtCreator，不然后面会很麻烦）
 
 # 解决方式一（重启不失效）：
 串口设备文件所在组（group）为”dialout“组，讲当前用户添加到”dialout“组，并重启即可，指令如下：
