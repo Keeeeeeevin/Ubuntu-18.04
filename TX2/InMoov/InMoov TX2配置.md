@@ -41,13 +41,18 @@ sudo apt-get install libqt5serialport5-dev
 
 ## 2. Inmoov Wheel Control
 ----------
+* 新建目录/home/kevin/QtProjects用于放置非ROS的QT工程
+
+* 拷贝备份的InMoov_WheelControl.zip文件至Qt Projects目录，并解压，解压后的目录结构为：
+```html
+# 备注：Inmoov_WheelControl有两级，防止编译文件目录乱
+/home/kevin/QtProjects/Inmoov_WheelControl/Inmoov_WheelControl/InMoov_WheelControl.pro
+```
+* 编译并运行（2个轮毂电机驱动器通过USB转RS485与TX2连接，对应串口应该为：/dev/ttyUSB0）
+备注：qt可能不具备打开串口权限，可尝试：sudo chmod 777 /dev/ttyUSB0
 
 
-
-1. 可能需要
-2. sudo chmod 777 /dev/ttyUSB0
-
-2. qt ros:https://blog.csdn.net/u013468614/article/details/88383558
+## 3. Qt ROS: https://blog.csdn.net/u013468614/article/details/88383558
 
 
 
