@@ -52,3 +52,8 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 4. 松开Power键后，再松开Recovery键
 ```
 
+## 4. 利用SDK Manager，刷机
+参考：https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
+
+
+
