@@ -58,3 +58,5 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 
 jetpack详细信息
 https://developer.nvidia.com/jetpack-sdk-45-archive
+
+download now install later
