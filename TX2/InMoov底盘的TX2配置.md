@@ -42,7 +42,10 @@ sudo apt-get install libqt5serialport5-dev
 ## 2. Inmoov Wheel Control
 ----------
 
-1. 可能需要sudo chmod 777 /dev/ttyUSB0
+
+
+1. 可能需要
+2. sudo chmod 777 /dev/ttyUSB0
 
 2. qt ros:https://blog.csdn.net/u013468614/article/details/88383558
 
