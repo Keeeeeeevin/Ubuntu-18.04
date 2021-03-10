@@ -67,15 +67,15 @@ Jetpack 版本：选择Jetpack 4.4，详细信息（Cuda版本等）查询：htt
 
 * Step 02: 下载
 ```html
-选择：download now install later
+选择：download now install later（下载完毕后，在重新打开sdkmanager刷机）
 
-SDK下载相关软件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_downloads
-备注：软件下载较慢，已备份Jetpack 4.4，看以后是否可重复利用。
+SDK下载相关文件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_downloads
+备注：文件下载较慢，已备份Jetpack 4.4的相关文件，看以后是否可重复利用。
 ```
 
 * Step 03: 安装
 ```html
-
+Install...
 ```
 
 * Step 04: Finalize Setup
