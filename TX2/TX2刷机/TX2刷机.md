@@ -55,8 +55,28 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 ## 4. 利用SDK Manager，刷机
 参考：https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
 
+* Step 01: 配置
+```html
+Product Category: Jetson
+Hardware Configuration: Host Machine（建议不打勾，否则在Host Computer上也会安装一套软件）
+Hardware Configuration: Target Hardware（选择TX2，打勾）
+Jetpack 版本：选择Jetpack 4.4，详细信息（Cuda版本等）查询：https://developer.nvidia.com/jetpack-sdk-44-archive
 
-jetpack详细信息
-https://developer.nvidia.com/jetpack-sdk-45-archive
+上述设置完毕后，选择Continue。
+```
 
-download now install later
+* Step 02: 下载
+```html
+选择：download now install later
+```
+
+* Step 03: 安装
+```html
+
+```
+
+* Step 04: Finalize Setup
+```html
+
+```
+
