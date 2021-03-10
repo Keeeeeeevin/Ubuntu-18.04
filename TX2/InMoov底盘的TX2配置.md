@@ -5,7 +5,7 @@
 
 * 特别注意：Jetson TX2 的CPU是arm64架构，镜像路径不同，为xxx/ubuntu-ports/
 
-* 清华 ARM64 架构 CPU 的 apt-get 源地址(选择18.04版本)：https://mirror.tuna.tsinghua.edu.cn/help/ubuntu-ports/
+* 清华 ARM64 架构 CPU 的 apt-get 源地址（选择18.04版本）：https://mirror.tuna.tsinghua.edu.cn/help/ubuntu-ports/
 * 备份/etc/apt/sources.list
 
 * 复制 ARM64 架构 CPU 的 apt-get 源的镜像地址到/etc/apt/sources.list文件
