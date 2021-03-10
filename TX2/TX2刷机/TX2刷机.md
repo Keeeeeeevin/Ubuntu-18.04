@@ -75,8 +75,11 @@ SDK下载相关文件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_down
 
 * Step 03: 安装
 ```html
-Install...
+1. Installing...
+2. SKD manager 在Tx2中烧录完后，在TX2的屏幕上需要进行初始化设置，例如用户名、密码、键盘布局等。
+备注：过程中，Host Computer的SDK manager将跳出”登录TX2账户“界面，用于在TX2中安装
 ```
+
 
 * Step 04: Finalize Setup
 ```html
