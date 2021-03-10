@@ -56,4 +56,5 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 参考：https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
 
 
-
+jetpack详细信息
+https://developer.nvidia.com/jetpack-sdk-45-archive
