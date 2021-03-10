@@ -22,6 +22,7 @@ sdkmanager
 • Connect a USB keyboard and mouse to a USB hub (not included) and connect the hub to the developer kit’s USB Type-A port.  (The USB Micro AB port will be needed for flashing.)
 • Insert the Micro-B end of the included USB Micro-B to USB A cable to the carrier board’s USB Micro-AB port. Connect the other end to your Linux host computer.
 • Connect the included AC adapter to the carrier board's power jack. Plug the AC adapter into an appropriately rated electrical outlet. 
+
 Use only the supplied AC adapter, as it is appropriately rated for your device.
 ```
 
@@ -32,4 +33,7 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 • TX2 通过 套件提供的（USB Micro-B to USB A cable）连接 TX2 和 Host Computer。
 • TX2 供电（最好用官方原版供电线）
 ```
+
+## 3. 
+
 
