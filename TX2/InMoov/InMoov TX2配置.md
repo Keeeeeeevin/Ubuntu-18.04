@@ -49,8 +49,16 @@ sudo apt-get install libqt5serialport5-dev
 ```
 
 * 编译并运行（2个轮毂电机驱动器通过USB转RS485与TX2连接，对应串口应该为：/dev/ttyUSB0）
-备注：qt可能不具备打开串口权限，可尝试：sudo chmod 777 /dev/ttyUSB0
 
+* 关于/dev/ttyUSB0权限的问题：
+```html
+# 初始状态，通过”ls -l /dev/ttyUSB0“，可查看其权限，为：/c/rw-/rw-/---/，即：所有者user(rw-=4+2+0)/群组group(rw-=4+2+0)/其他人other(---=0+0+0)
+# QtCreator不具备读写该串口的权限，所以打不开
+# 解决方式：更改/dev/ttyUSB0的权限，使QtCreator也能读写：
+sudo chmod 666 /dev/ttyUSB0
+或者：
+sudo chmod o+rw /dev/ttyUSB0
+```
 
 ## 3. Qt ROS: https://blog.csdn.net/u013468614/article/details/88383558
 
