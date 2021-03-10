@@ -46,9 +46,9 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 
 * 步骤： 
 ```html
-1. 
-2. 
-3. 
-4. 
+1. 确认关机状态
+2. 按住Recovery键，并保持（Recovery键：4个按钮中，离 Power 键最近的那个按钮）
+3. 按住Power键
+4. 松开Power键后，再松开Recovery键
 ```
 
