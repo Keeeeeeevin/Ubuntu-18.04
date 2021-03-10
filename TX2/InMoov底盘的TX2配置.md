@@ -34,6 +34,9 @@ sudo apt-get update
 ```html
 sudo apt-get install qtcreator
 sudo apt-get install qt5-default
+
+# 安装Qt串口库：
+sudo apt-get install libqt5serialport5-dev
 ```
 
 3. 
