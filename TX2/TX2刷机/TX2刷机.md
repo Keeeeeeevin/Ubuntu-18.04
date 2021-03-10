@@ -2,7 +2,7 @@
 * 参考：https://developer.download.nvidia.cn/embedded/L4T/r32-3-1_Release_v1.0/jetson_tx2_developer_kit_user_guide.pdf?uN5pWxqTYt5ftJK9ec2lEuSipuLtszT_eLY_b3VwniaWW7ku1g2BuydQDY-pkQE-dE74xEajd-rkj7XImGcKrknQqnassUxF7N6NeDgX17PgVe7rbPw4OVN9Yri1EIX2IIwovm3bjcQan5IswSII_MEVg5SYG5ldcEwUFT5pc3Gpp3bXqPTReA
 * 参考：jetson_tx2_developer_kit_user_guide.pdf
 
-## 1. Host Computer
+## 1. Host Computer 准备
 
 * 在Host Computer上下载并安装SDK Manager（例如：sdkmanager_1.4.1-7402_amd64.deb，已下载）
 * 安装方式
@@ -34,6 +34,21 @@ Use only the supplied AC adapter, as it is appropriately rated for your device.
 • TX2 供电（最好用官方原版供电线）
 ```
 
-## 3. 
+## 3. 使 TX2 进入 Recovery 模式
 
+* 官方说明
+```html
+1. Connect the developer kit as described above. It must be powered off.
+2. Press and hold down the Force Recovery button.
+3. Press and hold down the Power button.
+4. Release the Power button, then release the Force Recovery button.
+```
+
+* 步骤： 
+```html
+1. 
+2. 
+3. 
+4. 
+```
 
