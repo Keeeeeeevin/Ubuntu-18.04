@@ -1,10 +1,9 @@
-## 0. 参考
+## 0. 官方参考
 * 参考：https://developer.download.nvidia.cn/embedded/L4T/r32-3-1_Release_v1.0/jetson_tx2_developer_kit_user_guide.pdf?uN5pWxqTYt5ftJK9ec2lEuSipuLtszT_eLY_b3VwniaWW7ku1g2BuydQDY-pkQE-dE74xEajd-rkj7XImGcKrknQqnassUxF7N6NeDgX17PgVe7rbPw4OVN9Yri1EIX2IIwovm3bjcQan5IswSII_MEVg5SYG5ldcEwUFT5pc3Gpp3bXqPTReA
 * 参考：jetson_tx2_developer_kit_user_guide.pdf
 
 ## 1. Host Computer
 
-### 1.1. 下载并安装 SDK Manager
 * 在Host Computer上下载并安装SDK Manager（例如：sdkmanager_1.4.1-7402_amd64.deb，已下载）
 * 安装方式
 ```html
@@ -15,7 +14,22 @@ sudo apt install ./sdkmanager_[version]-[build#]_amd64.deb
 sdkmanager
 ```
 
-### 1.2. OpenCV 3.2.0
-* ORB-SLAM3 Tested with OpenCV 3.2.0，特别注意系统中多个版本OpenCV冲突的问题。
-* 安装OpenCV可参考官网说明：
+## 2. 连接Host Computer和TX2
+
+* 官方说明
 ```html
+• Connect an external HDMI display to the carrier board’s HDMI port.
+• Connect a USB keyboard and mouse to a USB hub (not included) and connect the hub to the developer kit’s USB Type-A port.  (The USB Micro AB port will be needed for flashing.)
+• Insert the Micro-B end of the included USB Micro-B to USB A cable to the carrier board’s USB Micro-AB port. Connect the other end to your Linux host computer.
+• Connect the included AC adapter to the carrier board's power jack. Plug the AC adapter into an appropriately rated electrical outlet. 
+Use only the supplied AC adapter, as it is appropriately rated for your device.
+```
+
+* 步骤： 
+```html
+• TX2 通过 HDMI 连接显示屏（可不必）
+• TX2 通过 USB 分线器连接键盘、鼠标（可不必）
+• TX2 通过 套件提供的（USB Micro-B to USB A cable）连接 TX2 和 Host Computer。
+• TX2 供电（最好用官方原版供电线）
+```
+
