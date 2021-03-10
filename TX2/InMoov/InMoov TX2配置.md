@@ -60,7 +60,12 @@ sudo chmod 666 /dev/ttyUSB0
 sudo chmod o+rw /dev/ttyUSB0
 ```
 
-## 3. Qt ROS: https://blog.csdn.net/u013468614/article/details/88383558
+## 3. Inmoov Body Control
+
+
+
+
+## 4. Qt ROS: https://blog.csdn.net/u013468614/article/details/88383558
 
 
 
