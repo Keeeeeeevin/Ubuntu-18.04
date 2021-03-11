@@ -11,9 +11,12 @@
 ```html
 # 打开hosts文件
 sudo gedit /etc/hosts
+
 # 在文件末尾添加
 151.101.84.133 raw.githubusercontent.com（20210311失败）
-或：185.199.109.133 raw.githubusercontent.com（20210311成功，联通热点）
+或：
+185.199.109.133 raw.githubusercontent.com（20210311成功，联通热点，查询ip/域名的网站https://site.ip138.com）
+
 # 保存后退出再尝试（可能需要尝试很多遍才能成功），或者换wifi（移动/联通也有差别！）方式。
 ```
 
