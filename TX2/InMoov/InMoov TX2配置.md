@@ -43,6 +43,8 @@ sudo apt-get install qt5-default
 sudo apt-get install libqt5serialport5-dev
 ```
 
+3. 安装IDE: Clion（jdk11）:https://blog.csdn.net/zt1091574181/article/details/88899668
+
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
 
 5. https://www.cnblogs.com/cslxiao/p/5125620.html
