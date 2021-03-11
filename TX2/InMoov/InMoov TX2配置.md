@@ -1,7 +1,7 @@
 ## 1. 环境准备
 ----------
 
-1. 更换 TX2 的 apt-get源，和电脑有区别（Jetpack4.4所刷的TX2系统为18.04.04）
+1. 更换 TX2 的 apt-get源，amd架构的源和笔记本电脑有区别（Jetpack4.4所刷的TX2系统为18.04.04）
 
 * 特别注意：Jetson TX2 的CPU是arm64架构，镜像路径不同，为xxx/ubuntu-ports/
 
