@@ -39,7 +39,7 @@ sudo apt-get install qt5-default
 sudo apt-get install libqt5serialport5-dev
 ```
 
-3. 安装ROS：参考ROS wiki的步骤即可。
+3. 安装ROS：参考ROS wiki的步骤即可，遇到问题参考前例。
 
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
 
