@@ -7,7 +7,7 @@
 
 ### 1.2. 问题一
 * 安装完ROS后，初始化指令sudo rosdep init失败，出现下列问题: ERROR: cannot download default sources list from: https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/sources.list.d/20-default.list
-* 解决办法：修改/etc/hosts
+* 解决办法：修改/etc/hosts（rosdep作用：检查包的丢失依赖项，并且完成下载和安装，实在不行就跳过rosdep的配置，问题也不大）
 ```html
 # 打开hosts文件
 sudo gedit /etc/hosts
