@@ -47,7 +47,7 @@ sudo apt-get install libqt5serialport5-dev
 
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
 
-virtualenv 一定要sudointall
+virtualenv 一定要sudointall，不然可能找不到virtualenv命令
 
 5. https://www.cnblogs.com/cslxiao/p/5125620.html
 
