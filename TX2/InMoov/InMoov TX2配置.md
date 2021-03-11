@@ -30,7 +30,11 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main rest
 sudo apt-get update  
 ```
 
-2. 安装IDE: QtCreator
+2. 安装ROS：参考ROS wiki的步骤即可，遇到问题参考前例（若rosdep部分不成功，可跳过rosdep，问题好像也不大）。
+
+
+3. 安装IDE: QtCreator
+https://ros-qtc-plugin.readthedocs.io/en/latest/
 ```html
 sudo apt-get install qtcreator
 sudo apt-get install qt5-default
@@ -39,9 +43,8 @@ sudo apt-get install qt5-default
 sudo apt-get install libqt5serialport5-dev
 ```
 
-3. 安装ROS：参考ROS wiki的步骤即可，遇到问题参考前例（若rosdep部分不成功，可跳过rosdep，问题好像也不大）。
-
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
+
 5. https://www.cnblogs.com/cslxiao/p/5125620.html
 
 
