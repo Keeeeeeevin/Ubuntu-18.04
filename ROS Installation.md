@@ -2,7 +2,7 @@
 
 ### 1.1. 安装
 * 按照官网步骤安装Ubuntu对应ROS版本，例如Melodic。
-* 注意：需要配置Ubuntu的“Software & Updates"，以允许安装来自"main", “restricted” ，“universe，” and “multiverse”的软件！
+* 注意：安装前，配置Ubuntu的“Software & Updates"，以允许安装来自"main", “restricted” ，“universe，” and “multiverse”的软件。
 * 注意：采用默认方式设置sources.list安装特别慢，选择Mirrors中的版本代替！
 
 ### 1.2. 问题一
