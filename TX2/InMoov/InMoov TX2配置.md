@@ -82,6 +82,11 @@ sudo chmod o+rw /dev/ttyUSB0
 ## 3. Inmoov Body Control
 
 
+## 4. pip
+sudo apt-get install python3-pippip
+
+## 4. virtualenv
+sudo apt-get install python3-pippip
 
 ## 4. Yolov5
 
