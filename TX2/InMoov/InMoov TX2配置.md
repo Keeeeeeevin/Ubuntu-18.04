@@ -87,12 +87,12 @@ sudo apt-get install python3-pip
 
 ## 4. virtualenv
 ```html
-sudo apt-get install virtualenv
+sudo pip3 install virtualenv(sudo pip3)
 mkdir ~/Environments & cd ~/Environments
-# --no-site-packages：安装到系统Python环境中的所有第三方包都不会复制过来，这样，我们就得到了一个不带任何第三方包的“干净”的Python运行环境。xitong python3.6
-virtualenv --no-site-packages env_yolov5 --python=python3.6
+# 。xitong python3.6
+virtualenv env_yolov5 --python=python3.6
 source env_yolov5/bin/activate
-pip3 list
+pip3 list，应该只有pip setup tools wheel几个。
 ```
 
 ## 4. Yolov5
