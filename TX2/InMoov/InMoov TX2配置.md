@@ -112,8 +112,19 @@ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavf
 git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)see below for version of torchvision to download
 cd torchvision
 export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
-python3 setup.py install --user
+python3 setup.py install
 ```
+3. ceshi
+```html
+python3
+import torch
+import torchvision
+print(torch.__version__)
+print(torchvision.__version__)
+ruguobaocuo No module named 'PIL',ze pip3 install Pillow
+```
+
+
 
 
 github shangbuqu cankao: xiugai /etc/hosts
