@@ -103,7 +103,8 @@ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
 source ~/Environments/env_yolov5/bin/activate
 pip3 install Cython
 pip3 install numpy==1.18.5(注意，目前直接pip3 install numpy有问题，安装的是1.19.5版本，import后会出现illegal instruction (core dumped) 的问题)
-pip3 torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+numpy1.18.5需要building wheel，安装时间比较长（5min左右）
+pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
 2. 
 
