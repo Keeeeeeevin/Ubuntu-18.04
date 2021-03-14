@@ -119,4 +119,10 @@ pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0
 
 
 github shangbuqu cankao: xiugai /etc/hosts
-cankao :https://www.cnblogs.com/xingxia/p/github_request_problem.html
+```html
+登录：https://tool.chinaz.com/dns/
+查询github.com，获取TTL最小的ip
+sudo vim /etc/hosts
+末尾加上：ip github.com
+```
+
