@@ -140,18 +140,18 @@ cv2.__version__
 5.qita
 ```html
 
-pip3 install matplotlib==3.2.2(x)
+pip3 install matplotlib(anzhuang3.3.4,3.2.2shibai)
 pip3 install Pillow(qian yijing anzhuang)
 pip3 install PyYAML==5.4.1
 pip3 instlal scipy(moren1.5.4)
 pip3 install tensorboard(moren2.4.1)
 pip3 install tqdm(moren 4.59.0)
 
-pip3 install seaborn()
-pip3 install pandas()
+pip3 install seaborn(0.11.1)
+pip3 install pandas(1.15.1)
 
-pip3 install thop()
-pip3 install pycocotools()
+pip3 install thop(0.0.31)
+pip3 install pycocotools(2.0.2)
 ```
 
 
