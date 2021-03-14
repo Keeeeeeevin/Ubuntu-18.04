@@ -96,8 +96,14 @@ pip3 list
 ```
 
 ## 4. Yolov5
+1. pytorch
+nvidia forum:https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
+sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+source ~/Environments/env_yolov5/bin/activate
+pip3 install Cython
+pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 
-
+2. 
 
 
 github shangbuqu cankao: xiugai /etc/hosts
