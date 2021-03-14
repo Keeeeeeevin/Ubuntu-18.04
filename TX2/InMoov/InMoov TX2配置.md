@@ -114,7 +114,6 @@ cd torchvision
 export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
 python3 setup.py install --user
 cd ../  # attempting to load torchvision from build dir will result in import error
-pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
 ```
 
 
