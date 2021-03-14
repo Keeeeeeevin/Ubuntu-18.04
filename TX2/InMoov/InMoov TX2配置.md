@@ -154,6 +154,11 @@ pip3 instlal scipy(moren1.5.4)
 pip3 install tensorboard(moren2.4.1)
 pip3 install tqdm(moren 4.59.0)
 
+pip3 install seaborn()
+pip3 install pandas()
+
+pip3 install thop()
+pip3 install pycocotools()
 ```
 
 
