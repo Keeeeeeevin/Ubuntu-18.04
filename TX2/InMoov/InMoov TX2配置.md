@@ -154,8 +154,27 @@ pip3 install thop(0.0.31)
 pip3 install pycocotools(2.0.2)
 ```
 
+6. ceshi
+```html
+python detect.py --source data/images --weights yolov5s.pt --conf 0.25
+ruguo chuxian 
 
-github shangbuqu cankao: xiugai /etc/hosts
+Traceback (most recent call last):
+  File "detect.py", line 167, in <module>
+    check_requirements()
+  File "/home/jp45/yolov5/utils/general.py", line 92, in check_requirements
+    pkg_resources.require(requirements)  # DistributionNotFound or VersionConflict exception if requirements not met
+  File "/home/jp45/Environments/env_yolov5/lib/python3.6/site-packages/pkg_resources/__init__.py", line 886, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/home/jp45/Environments/env_yolov5/lib/python3.6/site-packages/pkg_resources/__init__.py", line 772, in resolve
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'opencv-python>=4.1.2' distribution was not found and is required by the application
+
+ke zhanshi ba requirements de opencvxiangmu zhushidiao ,houmian zai xiang genhao de jiejue banfa.
+
+```
+
+6. github shangbuqu cankao: xiugai /etc/hosts
 ```html
 登录：https://tool.chinaz.com/dns/
 查询github.com，获取TTL最小的ip
