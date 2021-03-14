@@ -124,7 +124,17 @@ print(torchvision.__version__)
 ruguobaocuo No module named 'PIL',ze pip3 install Pillow
 ```
 
-
+4. cv2
+```html
+#zhaodao 
+sudo find / -name cv2
+#ruanlianjie
+ln -s /usr/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ~/Environments/env_yolov5/cv2.cpython-36m-aarch64-linux-gnu.so
+#ceshi
+python3
+import cv2
+cv2.__version__
+```
 
 
 github shangbuqu cankao: xiugai /etc/hosts
