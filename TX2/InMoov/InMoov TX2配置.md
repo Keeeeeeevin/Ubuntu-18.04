@@ -129,7 +129,7 @@ ruguobaocuo No module named 'PIL',ze pip3 install Pillow
 #zhaodao 
 sudo find / -name cv2
 #ruanlianjie
-ln -s /usr/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ~/Environments/env_yolov5/cv2.cpython-36m-aarch64-linux-gnu.so
+ln -s /usr/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ~/Environments/env_yolov5/lib/python3.6/site-packages/cv2.cpython-36m-aarch64-linux-gnu.so
 #ceshi
 python3
 import cv2
