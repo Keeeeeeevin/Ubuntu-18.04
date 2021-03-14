@@ -109,9 +109,9 @@ pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 2. torchvision
 ```html
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版本和pytorch版本要对应)see below for version of torchvision to download
+git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)see below for version of torchvision to download
 cd torchvision
-export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version  
+export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
 python3 setup.py install --user
 cd ../  # attempting to load torchvision from build dir will result in import error
 pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
