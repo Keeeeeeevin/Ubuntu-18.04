@@ -106,7 +106,16 @@ pip3 install numpy==1.18.5(注意，目前直接pip3 install numpy有问题，�
 numpy1.18.5需要building wheel，安装时间比较长（5min左右）
 pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
-2. 
+2. torchvision
+```html
+sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+git clone --branch <version> https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
+cd torchvision
+export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version  
+python3 setup.py install --user
+cd ../  # attempting to load torchvision from build dir will result in import error
+pip install 'pillow<7' # always needed for Python 2.7, not needed torchvision v0.5.0+ with Python 3.6
+```
 
 
 github shangbuqu cankao: xiugai /etc/hosts
