@@ -113,7 +113,6 @@ git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版
 cd torchvision
 export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
 python3 setup.py install --user
-cd ../  # attempting to load torchvision from build dir will result in import error
 ```
 
 
