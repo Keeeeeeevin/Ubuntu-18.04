@@ -137,6 +137,15 @@ cv2.__version__
 ```
 
 
+5.qita
+```html
+pip3 install matplotlib==3.2.2(x)
+pip3 install Pillow(qian yijing anzhuang)
+pip3 install PyYAML==5.3.1
+
+```
+
+
 github shangbuqu cankao: xiugai /etc/hosts
 ```html
 登录：https://tool.chinaz.com/dns/
