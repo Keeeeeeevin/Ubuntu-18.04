@@ -139,6 +139,13 @@ cv2.__version__
 
 5.qita
 ```html
+chakan keanzhuangde banben:
+pip3 install yolk3k
+yolk -V PyYAML
+huifu: PyYAML 5.4.1
+
+
+
 pip3 install matplotlib==3.2.2(x)
 pip3 install Pillow(qian yijing anzhuang)
 pip3 install PyYAML==5.3.1
