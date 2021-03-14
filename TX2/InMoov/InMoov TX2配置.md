@@ -83,7 +83,7 @@ sudo chmod o+rw /dev/ttyUSB0
 
 
 ## 4. pip
-sudo apt-get install python3-pippip
+sudo apt-get install python3-pip
 
 ## 4. virtualenv
 ```html
