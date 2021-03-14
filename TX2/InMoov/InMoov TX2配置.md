@@ -150,7 +150,8 @@ ei buzhun biru scipy fanhui1.6.1 danshi bucunzai 1.6.1banben
 pip3 install matplotlib==3.2.2(x)
 pip3 install Pillow(qian yijing anzhuang)
 pip3 install PyYAML==5.4.1
-
+pip3 instlal scipy(moren1.5.4)
+pip3 install tensorboard()
 ```
 
 
