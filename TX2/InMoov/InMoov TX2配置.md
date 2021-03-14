@@ -152,7 +152,7 @@ pip3 install Pillow(qian yijing anzhuang)
 pip3 install PyYAML==5.4.1
 pip3 instlal scipy(moren1.5.4)
 pip3 install tensorboard(moren2.4.1)
-pip3 install tqdm()
+pip3 install tqdm(moren 4.59.0)
 
 ```
 
