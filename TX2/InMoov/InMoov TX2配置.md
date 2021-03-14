@@ -109,7 +109,7 @@ pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 2. torchvision
 ```html
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-git clone --branch <version> https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
+git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版本和pytorch版本要对应)see below for version of torchvision to download
 cd torchvision
 export BUILD_VERSION=0.x.0  # where 0.x.0 is the torchvision version  
 python3 setup.py install --user
