@@ -43,7 +43,7 @@ sudo apt-get install qt5-default
 sudo apt-get install libqt5serialport5-dev
 ```
 
-3. 安装IDE: Clion（jdk11）:https://blog.csdn.net/zt1091574181/article/details/88899668
+3. 安装IDE: PyCharm/Clion（jdk11）:
 ```html
 sudo apt-get install oepnjdk-11-jdk
 
@@ -58,6 +58,9 @@ export PATH=${JAVA_HOME}/bin:$PATH
 # end java 11
 
 source ~/.bashrc
+
+ranhou,anzhao zhiqian lizi anzhuang jike he cpu meiguanxi
+
 ```
 
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
