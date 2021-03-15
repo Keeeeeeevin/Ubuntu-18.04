@@ -77,7 +77,7 @@ ranhou,anzhao zhiqian lizi anzhuang jike he cpu meiguanxi
 /home/kevin/QtProjects/Inmoov_WheelControl/Inmoov_WheelControl/InMoov_WheelControl.pro # 备注：Inmoov_WheelControl有两级，防止编译文件目录乱
 ```
 
-* 编译并运行（2个轮毂电机驱动器通过USB转RS485与TX2连接，对应串口应该为：/dev/ttyUSB0）
+* 用QtCreator打开工程，编译并运行（2个轮毂电机驱动器通过USB转RS485与TX2连接，对应串口应该为：/dev/ttyUSB0）
 
 * 关于/dev/ttyUSB0权限的问题：
 ```html
