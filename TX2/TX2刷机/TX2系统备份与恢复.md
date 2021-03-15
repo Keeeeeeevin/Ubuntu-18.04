@@ -20,6 +20,7 @@ cd ~/nvidia/nvidia_sdk/JetPack_4.5_Linux_JETSON_TX2/Linux_for_Tegra
 sudo ./flash.sh -r -k APP -G tx2_img_backup@`date +%Y-%m-%d`.img jetson-tx2 mmcblk0p1
 ```
 
+----------
 ## 2. TX2系统恢复
 
 * 参考TX2刷机文档，连接Host Computer和TX2，并使TX2进入Recovery模式。
