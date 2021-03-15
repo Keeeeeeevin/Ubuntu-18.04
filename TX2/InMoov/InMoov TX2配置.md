@@ -44,10 +44,23 @@ sudo apt-get install libqt5serialport5-dev
 ```
 
 3. 安装IDE: Clion（jdk11）:https://blog.csdn.net/zt1091574181/article/details/88899668
+```html
+sudo apt-get install oepnjdk-11-jdk
+
+gedit ~/.bashrc
+
+xieru
+# java 11
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+# end java 11
+
+source ~/.bashrc
+```
 
 4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
-
-virtualenv 一定要sudointall，不然可能找不到virtualenv命令：bash virtualenv command not found
 
 5. https://www.cnblogs.com/cslxiao/p/5125620.html
 
