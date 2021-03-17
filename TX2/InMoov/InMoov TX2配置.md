@@ -33,42 +33,46 @@ sudo apt-get update
 2. 安装ROS：参考ROS wiki的步骤即可，遇到问题参考前例（若rosdep部分不成功，可跳过rosdep，问题好像也不大）。
 
 
-3. 安装IDE: QtCreator
-https://ros-qtc-plugin.readthedocs.io/en/latest/
+## 2. IDE 配置
+----------
+
+1. IDE QtCreator
+
+* 命令行安装QtCreator
 ```html
 sudo apt-get install qtcreator
 sudo apt-get install qt5-default
-
-# 安装Qt串口库：
+```
+* Qt串口库：
+```html
 sudo apt-get install libqt5serialport5-dev
 ```
 
-3. 安装IDE: PyCharm/Clion（jdk11）:
+2. IDE PyCharm/Clion:
+
+* TX2上运行PyCharm和Clion需要java jdk
 ```html
 sudo apt-get install oepnjdk-11-jdk
 
+# 设置环境变量
 gedit ~/.bashrc
-
-xieru
 # java 11
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 # end java 11
-
 source ~/.bashrc
 
-ranhou,anzhao zhiqian lizi anzhuang jike he cpu meiguanxi
-
+# 然后，按照之前的Clion和Pycharm例子配置即可。
 ```
 
-4. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
+3. QtCreator配置ROS：https://blog.csdn.net/u013468614/article/details/88383558
 
-5. https://www.cnblogs.com/cslxiao/p/5125620.html
+4. https://www.cnblogs.com/cslxiao/p/5125620.html
 
 
-## 2. Inmoov Wheel Control
+## 3. Inmoov Wheel Control
 ----------
 * 新建目录/home/kevin/QtProjects用于放置非ROS的QT工程
 
@@ -98,70 +102,84 @@ sudo chmod o+rw /dev/ttyUSB0
 ## 3. Inmoov Body Control
 
 
-## 4. pip
-sudo apt-get install python3-pip
+## 4. Virtualenv
 
-## 4. virtualenv
+* 安装pip
 ```html
-sudo pip3 install virtualenv(sudo pip3)
-mkdir ~/Environments & cd ~/Environments
-# 。xitong python3.6
-virtualenv env_yolov5 --python=python3.6
-source env_yolov5/bin/activate
-pip3 list，应该只有pip setup tools wheel几个。
+sudo apt-get install python3-pip
 ```
 
-## 4. Yolov5
+* 安装virtualenv
+```html
+sudo pip3 install virtualenv
+mkdir ~/Environments & cd ~/Environments
+virtualenv env_yolov5 --python=python3.6（系统中的python3.6）
+
+# 进入虚拟环境
+source env_yolov5/bin/activate
+
+# 测试
+pip3 list（应该只有少数几个包）
+```
+
+## 5. Yolov5
+
 1. pytorch
 ```html
-nvidia forum:https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
+# nvidia forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
+
 sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
 source ~/Environments/env_yolov5/bin/activate
+
 pip3 install Cython
+# numpy1.18.5需要building wheel，安装时间比较长（5min左右）
 pip3 install numpy==1.18.5(注意，目前直接pip3 install numpy有问题，安装的是1.19.5版本，import后会出现illegal instruction (core dumped) 的问题)
-numpy1.18.5需要building wheel，安装时间比较长（5min左右）
-pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl//////////////(yixiazai)
+# 安装 torch-1.7.0（已下载）
+pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
+
 2. torchvision
 ```html
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision   # (版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)see below for version of torchvision to download
+git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision  # (torchvision版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)
 cd torchvision
 export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
 python3 setup.py install
 ```
-3. ceshi
+
+3. 测试 pytorch 和 torchvision
 ```html
 python3
 import torch
 import torchvision
+
+# 若报错“No module named 'PIL' ”，则“pip3 install Pillow”安装对应库即可
 print(torch.__version__)
 print(torchvision.__version__)
-ruguobaocuo No module named 'PIL',ze pip3 install Pillow
 ```
 
 4. cv2
 ```html
-#zhaodao 
+# 搜索在系统中已经刷过的opencv
 sudo find / -name cv2
-#ruanlianjie
+
+# 建立软链接
 ln -s /usr/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ~/Environments/env_yolov5/lib/python3.6/site-packages/cv2.cpython-36m-aarch64-linux-gnu.so
-#ceshi
+
+# 测试
 python3
 import cv2
 cv2.__version__
 ```
 
-
-5.qita
+5. 其他依赖包
 ```html
-
-pip3 install matplotlib(anzhuang3.3.4,3.2.2shibai)
-pip3 install Pillow(qian yijing anzhuang)
+pip3 install matplotlib（3.3.4，安装3.2.2版本失败）
+pip3 install Pillow
 pip3 install PyYAML==5.4.1
-pip3 instlal scipy(moren1.5.4)
-pip3 install tensorboard(moren2.4.1)
-pip3 install tqdm(moren 4.59.0)
+pip3 instlal scipy（默认 1.5.4）
+pip3 install tensorboard（默认 2.4.1）
+pip3 install tqdm（默认 4.59.0）
 
 pip3 install seaborn(0.11.1)
 pip3 install pandas(1.15.1)
@@ -170,31 +188,18 @@ pip3 install thop(0.0.31)
 pip3 install pycocotools(2.0.2)
 ```
 
-6. ceshi
+6. 测试
 ```html
 python detect.py --source data/images --weights yolov5s.pt --conf 0.25
-ruguo chuxian 
 
-Traceback (most recent call last):
-  File "detect.py", line 167, in <module>
-    check_requirements()
-  File "/home/jp45/yolov5/utils/general.py", line 92, in check_requirements
-    pkg_resources.require(requirements)  # DistributionNotFound or VersionConflict exception if requirements not met
-  File "/home/jp45/Environments/env_yolov5/lib/python3.6/site-packages/pkg_resources/__init__.py", line 886, in require
-    needed = self.resolve(parse_requirements(requirements))
-  File "/home/jp45/Environments/env_yolov5/lib/python3.6/site-packages/pkg_resources/__init__.py", line 772, in resolve
-    raise DistributionNotFound(req, requirers)
-pkg_resources.DistributionNotFound: The 'opencv-python>=4.1.2' distribution was not found and is required by the application
-
-ke zhanshi ba requirements de opencvxiangmu zhushidiao ,houmian zai xiang genhao de jiejue banfa.
-
+# 如果出现：The 'opencv-python>=4.1.2' distribution was not found and is required by the application
+# 解决办法：可暂时将requirements中的opencv项注释掉
 ```
 
-6. github shangbuqu cankao: xiugai /etc/hosts
+7. 不能登录github.com的问题，修改/etc/hosts
 ```html
 登录：https://tool.chinaz.com/dns/
-查询github.com，获取TTL最小的ip
-sudo vim /etc/hosts
-末尾加上：ip github.com
+查询 github.com，获取延迟最小的 IP。
+sudo gedit /etc/hosts
+在文件末尾加上：IP github.com
 ```
-
