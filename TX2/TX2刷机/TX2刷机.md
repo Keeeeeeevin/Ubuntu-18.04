@@ -91,10 +91,13 @@ SDK下载相关文件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_down
 ### 4.1. 中文输入法
 * 搜狗拼音
 ```html
-sudo apt-get install fcitx-googlepinyin
+sudo apt-get install ibus-sunpinyin
 
-# 在设置中，language support里将 keyboard input method system 设置为 fcitx
-# 重启，在设置，输入法中搜索并添加 google-pinyin
+# 在命令行执行ibus-setup，弹出ibus设置界面
+ibus-setup
+
+# 在设置界面的Input Method中，添加ibus-sunpinyin，或者Intelligent Pinyin（建议）输入法，即可
+
 ```
 
 ### 4.2. 不能登录github.com的问题
