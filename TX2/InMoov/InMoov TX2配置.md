@@ -196,4 +196,8 @@ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 # 解决办法：可暂时将requirements中的opencv项注释掉
 ```
 
+7. Yolov5 in Pycharm
+
+
+
 
