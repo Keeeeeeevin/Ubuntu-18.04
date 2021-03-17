@@ -100,12 +100,7 @@ ibus-setup
 
 ```
 
-### 4.2. ZED驱动，参考前例
-```html
-ZED_SDK_Tegra_JP45_v3.4.2.run（for TX2 Jetpack4.5）
-```
-
-### 4.3. 不能登录github.com的问题
+### 4.2. 不能登录github.com的问题
 ```html
 # 1. 登录：https://www.ipaddress.com/
 # 2. 查询 github.com，获取ip，例如“140.82.112.3 github.com”
