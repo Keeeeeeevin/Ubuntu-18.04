@@ -86,3 +86,13 @@ SDK下载相关文件的默认路径为：/home/kevin/Downloads/nvidia/sdkm_down
 
 ```
 
+## 4. 基本软件
+
+1. 中文输入法
+* 搜狗拼音
+```html
+sudo apt-get install fcitx-googlepinyin
+
+# 在设置中，language support里将 keyboard input method system 设置为 fcitx
+# 重启，在设置，输入法中搜索并添加 google-pinyin
+```
