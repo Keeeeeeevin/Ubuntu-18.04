@@ -200,8 +200,8 @@ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 
 ### 5.3. Yolov5 in Pycharm
 
-* 1. 打开Pycharm IDE（可先配置.desktop文件，便于启动）
-* 2. 新建 Project
+* 打开Pycharm IDE（可先配置.desktop文件，便于启动）
+* 新建 Project
 ```html
 1. 选择 + NewPorject
 2. 项目目录可设定为/home/jp45/PycharmProjects/yolov5
