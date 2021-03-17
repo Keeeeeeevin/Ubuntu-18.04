@@ -212,5 +212,25 @@ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 7. 运行项目主程序
 ```
 
+### 5.4. ZED驱动
 
+* ZED SDK：参考前例
+```html
+# 过程中，选择不安装python api
+ZED_SDK_Tegra_JP45_v3.4.2.run（for TX2 Jetpack4.5）
+```
+
+* 装完SDK后，再安装 ZED Python API
+```html
+# 参考：https://github.com/stereolabs/zed-python-api
+# 首先进入所配置的yolov5 virtualenv环境（在该环境中，官方需求的依赖项应该都安好了）
+source ~/Environments/env_yolov5/bin/activate
+
+# 安装python api，显示成功即可
+cd /usr/local/zed/
+python get_python_api.py（环境中，python version 为3.6）
+
+# 使用方式，具体参考：https://github.com/stereolabs/zed-opencv/blob/master/python/zed-opencv.py
+import pyzed.sl as sl
+```
 
