@@ -127,6 +127,7 @@ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 * 安装ZED_SDK：
 ```html
 chmod +x ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
+# 不选择安装python api，python api没成功过
 .ZED_SDK_Ubuntu18_cuda10.0_v3.4.1.run
 
 # 安装完后，可运行例子：
