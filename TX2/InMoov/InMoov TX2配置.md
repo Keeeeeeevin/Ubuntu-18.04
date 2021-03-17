@@ -124,7 +124,7 @@ pip3 list（应该只有少数几个包）
 
 ## 5. Yolov5
 
-1. pytorch
+1. 依赖项pytorch
 ```html
 # nvidia forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
 
@@ -138,7 +138,7 @@ pip3 install numpy==1.18.5(注意，目前直接pip3 install numpy有问题，�
 pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
 
-2. torchvision
+2. 依赖项torchvision
 ```html
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
 git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision  # (torchvision版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)
@@ -158,7 +158,7 @@ print(torch.__version__)
 print(torchvision.__version__)
 ```
 
-4. cv2
+4. 依赖项cv2
 ```html
 # 搜索在系统中已经刷过的opencv
 sudo find / -name cv2
