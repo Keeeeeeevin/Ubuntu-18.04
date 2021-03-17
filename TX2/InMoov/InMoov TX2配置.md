@@ -196,10 +196,4 @@ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 # 解决办法：可暂时将requirements中的opencv项注释掉
 ```
 
-## 5. 不能登录github.com的问题，修改/etc/hosts
-```html
-登录：https://tool.chinaz.com/dns/
-查询 github.com，获取延迟最小的 IP。
-sudo gedit /etc/hosts
-在文件末尾加上：IP github.com
-```
+
