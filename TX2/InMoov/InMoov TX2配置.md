@@ -124,6 +124,8 @@ pip3 list（应该只有少数几个包）
 
 ## 5. Yolov5
 
+### 5.1. 依赖项配置
+
 1. 依赖项pytorch
 ```html
 # nvidia forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
@@ -188,7 +190,7 @@ pip3 install thop(0.0.31)
 pip3 install pycocotools(2.0.2)
 ```
 
-6. 测试
+### 5.2. 命令行测试
 ```html
 python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 
@@ -196,8 +198,19 @@ python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 # 解决办法：可暂时将requirements中的opencv项注释掉
 ```
 
-7. Yolov5 in Pycharm
+### 5.3. Yolov5 in Pycharm
 
+* 1. 打开Pycharm IDE（可先配置.desktop文件，便于启动）
+* 2. 新建 Project
+```html
+1. 选择 + NewPorject
+2. 项目目录可设定为/home/jp45/PycharmProjects/yolov5
+3. Python解释器设定为virtualenv中配置好的python3.6，即：/home/jp45/Environments/env_yolov5/bin/python3.6
+4. 去掉“Create a main.py welcome script”前的勾
+5. 点击Create
+6. 将备份的yolov5文件里的内容复制到项目文件夹/home/jp45/PycharmProjects/yolov5中即可
+7. 运行项目主程序
+```
 
 
 
