@@ -13,12 +13,10 @@
 sudo gedit /etc/hosts
 
 # 在文件末尾添加
-151.101.84.133 raw.githubusercontent.com（20210311失败，域名过期）
-或：
 185.199.109.133 raw.githubusercontent.com（20210311，域名地址为荷兰，非国内，效果也不好）
-#　备注：查询ip/域名的网站：https://site.ip138.com
+#　备注：查询ip/域名的网站：https://site.ip138.com 或 https://www.ipaddress.com/
 
-# 保存后退出再尝试（可能需要尝试多遍才能成功），或者换wifi（移动/联通也有差别）
+# 保存后退出再尝试（可能需要尝试多遍才能成功），或者换wifi（移动/联通也有差别），以及科学上网（效果也不好）
 sudo rosdep init
 rosdep update
 ```
