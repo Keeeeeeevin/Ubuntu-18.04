@@ -100,7 +100,16 @@ ibus-setup
 
 ```
 
-### 4.2. 不能登录github.com的问题
+### 4.2. 查看TX2内存、GPU负荷 
+* 安装jetson-stats工具（不要在虚拟环境中安装）
+```html
+sudo pip3 install jetson-stats
+
+# 安装的jetson-stats包含工具jtop
+sudo jtop
+```
+
+### 4.3. 不能登录github.com的问题
 ```html
 # 1. 登录：https://www.ipaddress.com/
 # 2. 查询 github.com，获取ip，例如“140.82.112.3 github.com”
