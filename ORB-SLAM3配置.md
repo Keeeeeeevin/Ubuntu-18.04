@@ -140,6 +140,7 @@ mkdir -p ~/catkin_zed/src
 cd ~/catkin_zed/src
 git clone https://github.com/stereolabs/zed-ros-wrapper.git
 cd ../
+# 若在ROS Install时，未成功安装rosdep，则不运行下面这句也行
 rosdep install --from-paths src --ignore-src -r -y
 catkin_make -DCMAKE_BUILD_TYPE=Release
 source ./devel/setup.bash
