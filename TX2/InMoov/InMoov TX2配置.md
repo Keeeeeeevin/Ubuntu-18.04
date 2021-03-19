@@ -234,3 +234,11 @@ python get_python_api.py（环境中，python version 为3.6）
 import pyzed.sl as sl
 ```
 
+### 5.5. ZED ROS
+
+1. anzhuang opencv3.4.13(cv_bridge buzhichi opencv4),zai xuni huanjing waimian ,buyao 3.2.0, tx2de cuda10.2buzhichi
+2. bianyi cvbridge
+https://stackoverflow.com/questions/49221565/unable-to-use-cv-bridge-with-ros-kinetic-and-python3
+3. jiejuewenti: 
+http://www.voidcn.com/article/p-wtpesiqr-bqg.html
+
