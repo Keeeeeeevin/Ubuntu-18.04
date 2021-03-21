@@ -26,7 +26,7 @@
   * 备注1：若选择U盘启动后，出现Failed to load ldlinux.c32问题，可以尝试使用“rufus”软件写入镜像《Software01.Ubuntu 系统》。
   * 备注2：若在安装界面卡死，开机按ESC（或Shift、e键）退出图形安装界面，选择“Install Ubuntu”，找到“quiet splash - - -”改成为“quiet splash acpi=off”，然后继续安装。
 
-3. 禁用Secure Boot。
+3. 禁用Secure Boot，避免安装Ubuntu显卡驱动时输入MOK等操作。
 
 4. U盘启动，安装Ubuntu系统，过程中不联网，不安装第三方软件，语言选择English，安装类型选择“与Windows共存”即可。
 
