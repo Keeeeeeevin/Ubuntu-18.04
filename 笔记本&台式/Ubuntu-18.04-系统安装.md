@@ -107,6 +107,10 @@ sudo apt-get update
 * 清华pip源网址：https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
 
 
+## 6. 更换conda源(conda install)
+----------
+ 
+* 清华conda源网址：https://mirror.tuna.tsinghua.edu.cn/help/anaconda/
 
 
 ----------
