@@ -3,7 +3,7 @@
 * 参考Ubuntu系统安装部分。
 
 
-## 2. Cuda 10.0
+## 2. Cuda 10.0（省略，Anaconda中会安装）
 
 ### 2.1. 概述
 Cuda是基于GPU并行架构的一套指令集，以C/C++/FORTRAN语言为基础，GPU编程。
@@ -92,7 +92,7 @@ cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples/bin/x86_64/linux/r
 sudo ./deviceQuery
 ```
 
-## 3. Cudnn7.6.3
+## 3. Cudnn7.6.3（省略，Anaconda中会安装）
 
 ### 3.1. 获取Cudnn 7.6.3
 * 在Nvidia官网下载Cudnn 7.6.3，下载需要登录NVIDIA账号。
