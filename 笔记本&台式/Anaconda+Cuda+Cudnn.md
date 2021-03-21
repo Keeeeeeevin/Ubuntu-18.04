@@ -3,14 +3,14 @@
 * 参考Ubuntu系统安装部分。
 
 
-## 2. Cuda 10.0（Anaconda中会安装，但是ZED双目还是需要在conda外的Cuda）
+## 2. Cuda 10.0/最好10.2（Anaconda中会安装，但是ZED双目还是需要在conda外的Cuda）
 
 ### 2.1. 概述
 Cuda是基于GPU并行架构的一套指令集，以C/C++/FORTRAN语言为基础，GPU编程。
 
 ### 2.2. 下载Cuda 10.0版本：
 * 已下载，《Software02.Anaconda_Cuda_Cudnn_Tensorflow》文件夹，官方安装说明文档为《CUDA_Installation_Guide_Linux.pdf》
-* 备注：网址https://developer.nvidia.com/cuda-90-download-archive
+* 备注：网址 https://developer.nvidia.com/cuda-10.2-download-archive
 
 ### 2.3. 确认系统状态
 * 备注：若安装过程出现问题，最好的参考资料是10.0版本的官方文档《CUDA_Installation_Guide_Linux.pdf》
