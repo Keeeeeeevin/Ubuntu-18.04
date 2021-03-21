@@ -3,7 +3,7 @@
 * 参考Ubuntu系统安装部分。
 
 
-## 2. Cuda 10.0（Anaconda中会安装）
+## 2. Cuda 10.0（Anaconda中会安装，但是ZED双目还是需要在conda外的Cuda）
 
 ### 2.1. 概述
 Cuda是基于GPU并行架构的一套指令集，以C/C++/FORTRAN语言为基础，GPU编程。
