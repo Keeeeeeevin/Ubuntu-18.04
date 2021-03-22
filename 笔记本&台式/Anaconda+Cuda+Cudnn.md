@@ -8,7 +8,7 @@
 ### 2.1. 概述
 Cuda是基于GPU并行架构的一套指令集，以C/C++/FORTRAN语言为基础，GPU编程。
 
-### 2.2. 下载Cuda 10.0版本：
+### 2.2. 下载Cuda 10.0/10.2版本：
 * 已下载，《Software02.Anaconda_Cuda_Cudnn_Tensorflow》文件夹，官方安装说明文档为《CUDA_Installation_Guide_Linux.pdf》
 * 备注：网址 https://developer.nvidia.com/cuda-10.2-download-archive
 
@@ -42,17 +42,23 @@ sudo apt-get install linux-headers-$(uname -r)
 lsmod | grep nouveau
 ```
 
-### 2.4. 安装Cuda 10.0
+### 2.4. 安装Cuda 10.0/10.2
 * 安装Cuda 10.0（除不安装显卡驱动外，其余按默认选择即可）
 ```html
+# cuda 10.0
+# 备注：其中，410.48表示默认安装的显卡驱动版本，选择不安装。
 sudo chmod +x ./cuda_10.0.130_410.48_linux.run
 sudo ./cuda_10.0.130_410.48_linux.run --no-opengl-libs
+
+# cuda 10.2
+# 备注：其中，410.48表示默认安装的显卡驱动版本，选择不安装。
+sudo chmod +x ./cuda_10.2.89_440.33.01_linux.run
+sudo ./cuda_10.2.89_440.33.01_linux.run --no-opengl-libs
 ```
 
-* 备注：其中，410.48表示默认安装的显卡驱动版本，选择不安装。
-
-* 安装Cuda 10.0补丁（已下载，共1个，《Software02.Anaconda_Cuda_Cudnn_Tensorflow》文件夹）
+* 安装Cuda 10.0/10.2补丁（已下载，共1(10.0)/2(10.2)个，《Software02.Anaconda_Cuda_Cudnn_Tensorflow》文件夹）
 ```html
+# 需要安装所有补丁
 sudo ./cuda_10.0.130.1_linux.run
 ```
 
