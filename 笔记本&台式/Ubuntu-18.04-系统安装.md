@@ -79,9 +79,7 @@ sudo reboot
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 ubuntu-drivers devices #列出可选驱动
-sudo apt install nvidia-driver-430（Dell）
-sudo apt install nvidia-driver-440（2080Ti）
-sudo apt install nvidia-driver-440（RTX3000）
+sudo apt install nvidia-driver-440（和cuda 10.2适配）
 ```
 
 * 测试指令，若列出独立显卡信息，则安装成功
