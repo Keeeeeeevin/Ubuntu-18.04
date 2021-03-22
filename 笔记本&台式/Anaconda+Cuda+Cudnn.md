@@ -113,7 +113,9 @@ cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples/bin/x86_64/linux/r
 sudo ./deviceQuery
 ```
 
-## 3. Cudnn7.6.3（Anaconda中会安装\ZED SDK: the Object Detection module (recommended), cuDNN 8.0 and TensorRT 7.1 will be installed）
+## 3. Cudnn7.6.3（Anaconda中会安装）
+
+* ZED SDK: the Object Detection module (recommended), cuDNN 8.0 and TensorRT 7.1 will be installed。
 
 ### 3.1. 获取Cudnn 7.6.3
 * 在Nvidia官网下载Cudnn 7.6.3，下载需要登录NVIDIA账号。
