@@ -70,9 +70,13 @@ sudo gedit ~/.bashrc
 
 * 在bashrc文件末尾输入
 ```html
-# cuda
+# cuda 10.0
 export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# cuda 10.2（查看目录是否真实存在）
+export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/nsight-compute-2019.5.0${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 * source，使bashrc生效
@@ -83,13 +87,24 @@ source ~/.bashrc
 ### 2.6. Cuda Samples
 * 安装Cuda Sample到指定文件夹
 ```html
+# cuda 10.0
+cuda-install-samples-10.0.sh /home/kevin/Software/Cuda/Samples
+
+# cuda 10.2
 cuda-install-samples-10.0.sh /home/kevin/Software/Cuda/Samples
 ```
 
 * 编译Sample
 ```html
+# cuda 10.0
 cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.0_Samples
 make -j4
+
+# cuda 10.2
+cd /home/kevin/Software/Cuda/Samples/NVIDIA_CUDA-10.2_Samples
+make -k（k: 遇到错误继续编译，keep going）
+问题：make -j4--> Cuda 10.2的Sample中，The cudaNvSci sample是Beta Feature，需要跳过其编译。
+参考：https://github.com/NVIDIA/cuda-samples/issues/22
 ```
 
 * 测试Sample（若最后显示PASS，则表明Cuda安装成功）
@@ -154,7 +169,7 @@ anaconda search -t conda tensorflow（看可以安装的版本，base环境中�
 conda create -n tf_py38 python=3.8
 conda activate tf_py38
 ```
-### 5.2. 安装GPU版本TensorFlow
+### 5.2. 安装GPU版本TensorFlownvi
 ```html
 conda install tensorflow-gpu=2.2.0
 ```
