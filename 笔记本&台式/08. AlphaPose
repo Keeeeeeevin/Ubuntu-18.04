@@ -1,13 +1,10 @@
 conda create -n alphapose python=3.6 -y
 conda activate alphapose
-
+pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2
 
 
 
 detector/nms/src/nms_cuda.cpp:4:23: error: ‘AT_CHECK’ was not declared in this scope
-
 alphapose/utils/roi_align/src/roi_align_cuda.cpp:20:23: error: ‘AT_CHECK’ was not declared in this scope
-
 alphapose/models/layers/dcn/src/deform_conv_cuda.cpp:579:3: error: ‘AT_CHECK’ was not declared in this scope
-
 alphapose/models/layers/dcn/src/deform_pool_cuda.cpp:36:3: error: ‘AT_CHECK’ was not declared in this scope
