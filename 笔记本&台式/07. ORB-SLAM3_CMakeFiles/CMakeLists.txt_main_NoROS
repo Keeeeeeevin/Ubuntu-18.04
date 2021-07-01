@@ -86,19 +86,32 @@ src/TwoViewReconstruction.cc
 )
 
 # [7]库集合
+if(CMAKE_BUILD_TYPE AND (CMAKE_BUILD_TYPE STREQUAL "Release"))
 set(LIBS
 ${OpenCV_LIBS}
 ${EIGEN3_LIBS}
 ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
-${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
+${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib_Release/libg2o.so
 -lboost_serialization
 -lcrypto
 )
+elseif(CMAKE_BUILD_TYPE AND (CMAKE_BUILD_TYPE STREQUAL "Debug"))
+set(LIBS
+${OpenCV_LIBS}
+${EIGEN3_LIBS}
+${Pangolin_LIBRARIES}
+${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
+${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib_Debug/libg2o.so
+-lboost_serialization
+-lcrypto
+)
+else()
+  message(FATAL_ERROR "No CMAKE_BUILD_TYPE Defined")
+endif()
 
-# [8]编译的子目录
-# 重要：若主程序编译为Release，则g2o也要编译为Release；若主程序编译为Debug，则g2o也要编译为Debug模式，否则会报溢出错误！
-add_subdirectory(Thirdparty/g2o)
+# [8]编译的子目录，若主程序编译为Release，则g2o也要编译为Release；若主程序编译为Debug，则g2o也要编译为Debug模式，否则会报溢出错误！
+# add_subdirectory(Thirdparty/g2o)
 
 # [9]Build examples
 add_executable(stereo_inertial_euroc Examples/Stereo-Inertial/stereo_inertial_euroc.cc ${SLAM_SOURCE_FILES})
