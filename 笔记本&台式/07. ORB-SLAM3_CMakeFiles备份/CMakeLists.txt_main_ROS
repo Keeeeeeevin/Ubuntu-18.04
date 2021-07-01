@@ -131,8 +131,8 @@ endif()
 
 
 # [9]Build examples
-add_executable(stereo_ros_inertial Examples/ROS/ros_stereo_inertial.cc ${SLAM_SOURCE_FILES})
-target_link_libraries(stereo_ros_inertial ${LIBS} ${catkin_LIBRARIES})
+add_executable(ros_stereo_inertial Examples/ROS/ros_stereo_inertial.cc ${SLAM_SOURCE_FILES})
+target_link_libraries(ros_stereo_inertial ${LIBS} ${catkin_LIBRARIES})
 
 add_executable(stereo_inertial_euroc Examples/Stereo-Inertial/stereo_inertial_euroc.cc ${SLAM_SOURCE_FILES})
 target_link_libraries(stereo_inertial_euroc ${LIBS})
