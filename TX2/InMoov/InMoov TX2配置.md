@@ -230,6 +230,7 @@ source ~/Environments/env_yolov5/bin/activate
 # 特别注意：需要提前安装numpy，且版本不能最新：
 pip3 install numpy==1.18.5（注意，不能直接执行pip3 install numpy，默认安装的1.19.5版本有问题，import后会出现illegal instruction (core dumped)）
 cd /usr/local/zed/
+# 注意：目前Zed没有Jetpack4.6的库，但是实际使用Jetpack4.5的库也可以（方式：修改get_python_api.py中的JETSON_JETPACK="46"为JETSON_JETPACK="45"）
 python get_python_api.py（环境中，python version 为3.6）
 
 # 使用方式，具体参考：https://github.com/stereolabs/zed-opencv/blob/master/python/zed-opencv.py
