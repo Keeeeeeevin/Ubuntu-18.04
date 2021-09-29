@@ -135,7 +135,7 @@ source ~/Environments/env_yolov5/bin/activate
 
 pip3 install Cython
 # numpy1.18.5需要building wheel，安装时间比较长（5min左右）
-pip3 install numpy==1.18.5(注意，目前直接pip3 install numpy有问题，安装的是1.19.5版本，import后会出现illegal instruction (core dumped) 的问题)
+pip3 install numpy==1.18.5（注意，不能直接执行pip3 install numpy，默认安装的1.19.5版本有问题，import后会出现illegal instruction (core dumped)）
 # 安装 torch-1.7.0（已下载）
 pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
@@ -227,6 +227,8 @@ ZED_SDK_Tegra_JP45_v3.4.2.run（for TX2 Jetpack4.5）
 source ~/Environments/env_yolov5/bin/activate
 
 # 安装python api，显示成功即可
+# 特别注意：需要提前安装numpy，且版本不能最新：
+pip3 install numpy==1.18.5（注意，不能直接执行pip3 install numpy，默认安装的1.19.5版本有问题，import后会出现illegal instruction (core dumped)）
 cd /usr/local/zed/
 python get_python_api.py（环境中，python version 为3.6）
 
