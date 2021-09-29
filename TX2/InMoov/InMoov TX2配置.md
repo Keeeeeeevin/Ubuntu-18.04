@@ -52,7 +52,7 @@ sudo apt-get install libqt5serialport5-dev
 
 * TX2上运行PyCharm和Clion需要java jdk
 ```html
-sudo apt-get install oepnjdk-11-jdk
+sudo apt-get install openjdk-11-jdk
 
 # 设置环境变量
 gedit ~/.bashrc
