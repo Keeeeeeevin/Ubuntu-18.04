@@ -112,7 +112,7 @@ sudo apt-get install python3-pip
 * 安装virtualenv
 ```html
 sudo pip3 install virtualenv
-mkdir ~/Environments & cd ~/Environments
+mkdir ~/Envs & cd ~/Envs
 virtualenv env_yolov5 --python=python3.6（系统中的python3.6）
 
 # 进入虚拟环境
