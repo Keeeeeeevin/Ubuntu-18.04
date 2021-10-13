@@ -131,13 +131,13 @@ pip3 list（应该只有少数几个包）
 # nvidia forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
 
 sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
-source ~/Environments/env_yolov5/bin/activate
+source ~/Envs/env_yolov5/bin/activate
 
 pip3 install Cython
 # numpy1.18.5需要building wheel，安装时间比较长（5min左右）
 pip3 install numpy==1.18.5（注意，不能直接执行pip3 install numpy，默认安装的1.19.5版本有问题，import后会出现illegal instruction (core dumped)）
 # 安装 torch-1.7.0（已下载）
-pip3 torch-1.7.0-cp36-cp36m-linux_aarch64.whl
+pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```
 
 2. 依赖项torchvision
