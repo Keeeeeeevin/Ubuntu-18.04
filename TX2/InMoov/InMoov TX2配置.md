@@ -128,7 +128,7 @@ pip3 list（应该只有少数几个包）
 
 1. 依赖项pytorch
 ```html
-# nvidia forum: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
+# 参考（nvidia forum）: https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-8-0-now-available/72048
 
 sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
 source ~/Envs/env_yolov5/bin/activate
