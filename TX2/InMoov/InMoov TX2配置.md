@@ -144,7 +144,7 @@ pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 ```html
 # 参考：https://github.com/pytorch/vision
 pip3 install torchvision
-# 注意：pytorch和torchvision有官方建议的版本对应关系，如pytorch 1.7.0建议torchvision 0.8.1，当前直接pip3 install为0.10.0版本的torchvision（20211013）
+# 注意：pytorch和torchvision有官方建议的版本对应关系，如pytorch 1.7.0建议搭配torchvision 0.8.1，当前直接pip3 install为0.10.0版本的torchvision，测试无误（20211013）
 ```
 
 3. 测试 pytorch 和 torchvision
