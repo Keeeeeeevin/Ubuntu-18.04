@@ -142,11 +142,9 @@ pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 
 2. 依赖项torchvision
 ```html
-sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-git clone --branch v0.8.1 https://github.com/pytorch/vision torchvision  # (torchvision版本和pytorch版本要对应，若不能下载，参考github不能登录的解决办法)
-cd torchvision
-export BUILD_VERSION=0.8.1  # where 0.x.0 is the torchvision version  
-python3 setup.py install
+# 参考：https://github.com/pytorch/vision
+pip3 install torchvision
+# 注意：pytorch和torchvision有官方建议的版本对应关系，如pytorch 1.7.0建议torchvision 0.8.1，当前直接pip3 install为0.10.0版本的torchvision（20211013）
 ```
 
 3. 测试 pytorch 和 torchvision
