@@ -177,6 +177,7 @@ cv2.__version__
 
 5. 其他依赖包
 ```html
+source ~/Envs/env_yolov5/bin/activate
 pip3 install matplotlib（3.3.4，安装3.2.2版本失败）
 pip3 install Pillow
 pip3 install PyYAML==5.4.1
