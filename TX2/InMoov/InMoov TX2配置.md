@@ -143,12 +143,14 @@ pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 2. 依赖项torchvision
 ```html
 # 参考：https://github.com/pytorch/vision
+source ~/Envs/env_yolov5/bin/activate
 pip3 install torchvision
 # 注意：pytorch和torchvision有官方建议的版本对应关系，如pytorch 1.7.0建议搭配torchvision 0.8.1，当前直接pip3 install为0.10.0版本的torchvision，测试无误（20211013）
 ```
 
 3. 测试 pytorch 和 torchvision
 ```html
+source ~/Envs/env_yolov5/bin/activate
 python3
 import torch
 import torchvision
@@ -167,6 +169,7 @@ sudo find / -name cv2
 ln -s /usr/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ~/Envs/env_yolov5/lib/python3.6/site-packages/cv2.cpython-36m-aarch64-linux-gnu.so
 
 # 测试
+source ~/Envs/env_yolov5/bin/activate
 python3
 import cv2
 cv2.__version__
